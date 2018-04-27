@@ -1,0 +1,58 @@
+#roundtrip .box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-radius: 3px;
+}
+
+#roundtrip:selected .mark {
+    -fx-background-color: white;
+}
+
+#roundtrip:selected .box {
+    -fx-background-color: #28a3f4;
+}
+
+#oneway .box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-radius: 3px;
+}
+
+#oneway:selected .mark {
+    -fx-background-color: white;
+}
+
+#oneway:selected .box {
+    -fx-background-color: #28a3f4;
+
+}
+
+#menu {
+    --fx-fill-width: bold;
+    -fx-background-color: snow;
+    -fx-background-radius: 0;
+    -fx-text-fill: cornflowerblue;
+    -fx-text-alignment: center;
+    -fx-font-size: 20;
+    -fx-font-family: "Droid Serif";
+    -fx-graphic: shadow;
+    -fx-pref-width: 85px;
+    -fx-pref-height: 40px;
+}
+
+#menu:hover {
+    -fx-fill-width: bold;
+    -fx-background-color: #b6fcd5;
+    -fx-background-radius: 0;
+    -fx-text-fill: cornflowerblue;
+}
+
+#bookbutton {
+
+}
+
+#bookbutton:hover{
+
+}
+
+

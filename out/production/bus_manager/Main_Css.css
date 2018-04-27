@@ -1,0 +1,9 @@
+.root{
+    -fx-background-image: url("Image/BG.jpg");
+}
+#imagelist{
+    -fx-font-size: 0;
+    width: 261;
+    margin: 0 auto;
+
+}

@@ -1,0 +1,39 @@
+#ticket {
+    -fx-fill-width: bold;
+    -fx-background-color: snow;
+    -fx-background-radius: 22;
+    -fx-text-fill: cornflowerblue;
+    -fx-text-alignment: center;
+    -fx-font-size: 20;
+    -fx-font-family: "Droid Serif";
+    -fx-graphic: shadow;
+    -fx-pref-width: 130px;
+}
+
+#ticket:hover {
+    -fx-fill-width: bold;
+    -fx-background-color: #b6fcd5;
+    -fx-background-radius: 22;
+    -fx-text-fill: cornflowerblue;
+
+}
+
+#manager {
+    -fx-fill-width: bold;
+    -fx-background-color: snow;
+    -fx-background-radius: 22;
+    -fx-text-fill: cornflowerblue;
+    -fx-text-alignment: center;
+    -fx-font-size: 20;
+    -fx-font-family: "Droid Serif";
+    -fx-pref-width: 130px;
+}
+
+#manager:hover {
+    -fx-fill-width: bold;
+    -fx-background-color: #b6fcd5;
+    -fx-background-radius: 22;
+    -fx-text-fill: cornflowerblue;
+}
+
+

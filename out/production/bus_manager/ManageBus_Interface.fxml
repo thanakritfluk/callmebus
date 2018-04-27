@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageBus_Controller">
+   <children>
+      <AnchorPane prefHeight="547.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="547.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Image/ManageBG.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="7.0" prefHeight="49.0" prefWidth="221.0" text="Bus Manager">
+               <font>
+                  <Font name="MV Boli" size="34.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" height="38.79" radius="18.895" spread="0.54" width="38.79" />
+               </effect>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="13.0" layoutY="262.0" prefHeight="237.0" prefWidth="573.0" vbarPolicy="ALWAYS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+               <effect>
+                  <DropShadow color="#646161" spread="0.53" />
+               </effect>
+            </ScrollPane>
+            <Button layoutX="14.0" layoutY="508.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="82.0" text="Show List" />
+            <Button layoutX="439.0" layoutY="508.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" text="Add" />
+            <Button layoutX="518.0" layoutY="508.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" text="Remove" />
+            <Label layoutX="21.0" layoutY="179.0" prefHeight="25.0" prefWidth="150.0" text="Coach Company">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </Label>
+            <ComboBox layoutX="21.0" layoutY="211.0" prefHeight="19.0" prefWidth="150.0" />
+            <Label layoutX="21.0" layoutY="119.0" prefHeight="25.0" prefWidth="150.0" text="Depart From">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </Label>
+            <ComboBox layoutX="21.0" layoutY="151.0" prefWidth="150.0" />
+            <Label layoutX="364.0" layoutY="121.0" prefHeight="21.0" prefWidth="118.0" text="Amount / Seat">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.87" />
+               </effect>
+            </Label>
+            <TextField layoutX="364.0" layoutY="152.0" prefHeight="26.0" prefWidth="150.0" />
+            <Label />
+            <CheckBox layoutX="14.0" layoutY="80.0" mnemonicParsing="false" text="Round Trip">
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </CheckBox>
+            <CheckBox layoutX="129.0" layoutY="80.0" mnemonicParsing="false" text="One Way">
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </CheckBox>
+            <Label layoutX="194.0" layoutY="179.0" prefHeight="25.0" prefWidth="150.0" text="Depart Date &amp; Time">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </Label>
+            <ComboBox layoutX="194.0" layoutY="211.0" prefWidth="150.0" />
+            <Label layoutX="364.0" layoutY="181.0" prefHeight="21.0" prefWidth="139.0" text="Return Date &amp; Time">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </Label>
+            <ComboBox layoutX="364.0" layoutY="211.0" prefWidth="150.0" />
+            <Label layoutX="194.0" layoutY="121.0" prefHeight="1.0" prefWidth="150.0" text="Return To">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" spread="0.86" />
+               </effect>
+            </Label>
+            <ComboBox layoutX="194.0" layoutY="151.0" prefWidth="150.0" />
+            <Button fx:id="main" layoutX="526.0" layoutY="8.0" mnemonicParsing="false" onMousePressed="#backToMenu" prefHeight="48.0" prefWidth="67.0" text="Main" />
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>
