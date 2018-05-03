@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageBus_Controller">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageBus_Controller">
    <children>
       <AnchorPane prefHeight="547.0" prefWidth="600.0">
          <children>
@@ -33,7 +33,7 @@
                </effect>
             </Label>
             <Button fx:id="add" layoutX="439.0" layoutY="508.0" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="67.0" text="Add" />
-            <Button fx:id="remove" layoutX="518.0" layoutY="508.0" mnemonicParsing="false" onAction="#setDepartfrom" prefHeight="32.0" prefWidth="67.0" text="Remove" />
+            <Button fx:id="remove" layoutX="518.0" layoutY="508.0" mnemonicParsing="false" onAction="#removeData" prefHeight="32.0" prefWidth="67.0" text="Remove" />
             <Label layoutX="368.0" layoutY="119.0" prefHeight="25.0" prefWidth="150.0" text="Coach Company">
                <font>
                   <Font size="15.0" />

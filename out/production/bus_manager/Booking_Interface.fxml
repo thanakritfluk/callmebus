@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,6 +20,16 @@
                   <Image url="@Image/BuyTicketBG.png" />
                </image>
             </ImageView>
+            <RadioButton fx:id="roundtrip" layoutX="160.0" layoutY="101.0" mnemonicParsing="false" text="Round Trip" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="oneway" layoutX="23.0" layoutY="97.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="One Way" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
             <Label layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="292.0" text="Booking Ticket" textFill="WHITE">
                <font>
                   <Font name="Yu Gothic Regular" size="38.0" />
@@ -28,29 +38,12 @@
                   <DropShadow color="#141314a3" radius="12.965" spread="0.71" width="32.86" />
                </effect>
             </Label>
-            <CheckBox fx:id="roundtrip" layoutX="23.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#whichMark" prefHeight="39.0" prefWidth="150.0" stylesheets="@Booking_Interface.css" text="Round Trip" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="47.69" radius="22.542499999999997" spread="0.53" width="44.48" />
-               </effect>
-            </CheckBox>
-            <CheckBox fx:id="oneway" layoutX="193.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#whichMark" prefHeight="39.0" prefWidth="150.0" text="One Way" textFill="WHITE">
-               <font>
-                  <Font size="17.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="41.76" radius="21.119999999999997" spread="0.51" width="44.72" />
-               </effect>
-            </CheckBox>
             <ComboBox fx:id="depart" layoutX="193.0" layoutY="176.0" prefWidth="150.0" />
             <ComboBox fx:id="returndate" layoutX="193.0" layoutY="300.0" prefWidth="150.0" />
             <ComboBox fx:id="daparttime" layoutX="352.0" layoutY="256.0" prefHeight="25.0" prefWidth="52.0" />
             <ComboBox fx:id="departdate" layoutX="193.0" layoutY="256.0" prefWidth="150.0" />
             <ComboBox fx:id="returntime" layoutX="352.0" layoutY="300.0" prefHeight="25.0" prefWidth="52.0" />
             <ComboBox fx:id="company" layoutX="193.0" layoutY="345.0" prefWidth="150.0" />
-            <ComboBox fx:id="amount" layoutX="193.0" layoutY="395.0" prefWidth="150.0" />
             <ComboBox fx:id="arrive" layoutX="193.0" layoutY="216.0" prefWidth="150.0" />
             <Button fx:id="bookbutton" layoutX="494.0" layoutY="371.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="103.0" stylesheets="@Booking_Interface.css" text="Booking" textFill="#3c77ff">
                <font>
@@ -82,7 +75,7 @@
                   <DropShadow color="#9ccaff" height="47.44" radius="23.2825" spread="0.51" width="47.69" />
                </effect>
             </Label>
-            <Label layoutX="23.0" layoutY="395.0" prefHeight="25.0" prefWidth="115.0" text="Amount" textFill="WHITE">
+            <Label layoutX="23.0" layoutY="395.0" prefHeight="27.0" prefWidth="120.0" text="Numer of Seat" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -111,6 +104,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
+            <ComboBox fx:id="seat" layoutX="193.0" layoutY="396.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </children>

@@ -10,7 +10,7 @@ public class TestJDBC extends Jdbc_Manage {
 ////        Jdbc_Manage.removeRecord(tablename,"depart","nan");
 //        jdbc_manage.showTable(tablename);
 //    LocalDateTime a = LocdalDateTime.of(2017, Month.FEBRUARY, 3, 06, 30, 50);
-       String result = jdbc_manage.getTextFromSelectColumn("province_lat", "province_th", "province_name", "Bangkok","province_lat");
+       String result = jdbc_manage.getTextFromSelectColumn("province_lat", "province_th", "province_name", "Bangkok");
        System.out.println(result.replace(" ",""));
 //       double a = Double.parseDouble(result);
 //       System.out.println(a);
