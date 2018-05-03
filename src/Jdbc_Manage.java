@@ -103,6 +103,7 @@ public class Jdbc_Manage {
             if (rs.next()) result = rs.getString(columnNeed);
         } catch (SQLException e) {
             e.printStackTrace();
+            
         }
         return result;
     }
