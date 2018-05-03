@@ -11,9 +11,7 @@
 }
 
 #ticket:hover {
-    -fx-fill-width: bold;
     -fx-background-color: #b6fcd5;
-    -fx-background-radius: 22;
     -fx-text-fill: cornflowerblue;
 
 }

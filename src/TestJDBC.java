@@ -9,7 +9,10 @@ public class TestJDBC extends Jdbc_Manage {
 //                LocalDateTime.of(2017,Month.FEBRUARY,3,6,30,50),"ske",250.0);
 ////        Jdbc_Manage.removeRecord(tablename,"depart","nan");
 //        jdbc_manage.showTable(tablename);
-//    LocalDateTime a = LocalDateTime.of(2017, Month.FEBRUARY, 3, 06, 30, 50);
-        System.out.println(jdbc_manage.getTextFromSelectColumn("province_lat", "province_th", "province_name", "Bangkok","province_lat"));
+//    LocalDateTime a = LocdalDateTime.of(2017, Month.FEBRUARY, 3, 06, 30, 50);
+       String result = jdbc_manage.getTextFromSelectColumn("province_lat", "province_th", "province_name", "Bangkok","province_lat");
+       System.out.println(result.replace(" ",""));
+//       double a = Double.parseDouble(result);
+//       System.out.println(a);
     }
 }
