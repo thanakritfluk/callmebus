@@ -41,10 +41,7 @@
 }
 
 #menu:hover {
-    -fx-fill-width: bold;
     -fx-background-color: #b6fcd5;
-    -fx-background-radius: 0;
-    -fx-text-fill: cornflowerblue;
 }
 
 #bookbutton {
@@ -53,6 +50,18 @@
 
 #bookbutton:hover{
 
+}
+
+.combo-box{
+    -fx-border: 1px solid #AAA;
+    -fx-color: cornflowerblue;
+    -fx-font-size: inherit;
+    -fx-margin: 20px;
+    -fx-overflow: hidden;
+    -fx-padding: 5px 10px;
+    -fx-text-overflow: ellipsis;
+    -fx-white-space: nowrap;
+    -fx-width: 300px;
 }
 
 

@@ -1,7 +1,5 @@
 import javafx.beans.property.*;
 
-import java.time.LocalDateTime;
-
 public class ManagerDetail {
     private IntegerProperty id;
     private StringProperty depart;

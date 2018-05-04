@@ -94,18 +94,18 @@ public class Jdbc_Manage {
         return resultSet;
     }
 
-    public String getTextFromSelectColumn(String selectComlumn, String tablename, String whereColumn, String equals, String columnNeed) {
+    public String getTextFromSelectColumn(String selectComlumn, String tablename, String whereColumn, String equals) {
         connection = Connect();
         ResultSet rs = null;
         String result = null;
         try {
             rs = connection.createStatement().executeQuery("SELECT " + selectComlumn + " FROM " + tablename + " WHERE " + whereColumn + " = " +"\""+ equals+"\"");
-            if (rs.next()) result = rs.getString(columnNeed);
+            if (rs.next()) result = rs.getString(selectComlumn);
         } catch (SQLException e) {
             e.printStackTrace();
-            
+
         }
-        return result;
+        return result.replace(" ","");
     }
 
 
