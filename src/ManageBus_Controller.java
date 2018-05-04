@@ -83,6 +83,7 @@ public class ManageBus_Controller implements Initializable {
         connect = new Jdbc_Manage();
         oneway.setToggleGroup(group);
         roundtrip.setToggleGroup(group);
+        //Load Data
         loadDataToCompany();
         loadDataFromManagebus();
         loadDataForDepart();
