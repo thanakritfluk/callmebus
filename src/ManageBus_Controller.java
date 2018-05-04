@@ -81,6 +81,7 @@ public class ManageBus_Controller implements Initializable {
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
         connect = new Jdbc_Manage();
+
         oneway.setToggleGroup(group);
         roundtrip.setToggleGroup(group);
         //Load Data
@@ -89,6 +90,7 @@ public class ManageBus_Controller implements Initializable {
         loadDataForDepart();
         //Sort by dating.
         manage.getSortOrder().add(departinfo);
+
     }
 
     @FXML
@@ -133,7 +135,9 @@ public class ManageBus_Controller implements Initializable {
                 String depart = departfrom.getSelectionModel().getSelectedItem().toString();
                 String to = returnto.getSelectionModel().getSelectedItem().toString();
                 if (company.getSelectionModel() != null) {
+
                     String companyinfo = company.getSelectionModel().getSelectedItem().toString();
+
                     if (departdate.getValue() != null && returndate.getValue() != null) {
                         if (departtime.getText().length() + returntime.getText().length() == 10) {
                             double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", depart));
