@@ -85,8 +85,8 @@ public class ManageBus_Controller implements Initializable {
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
         connect = new Jdbc_Manage();
-        loadDataFromDB();
         setDepartfrom();
+        loadDataFromDB();
 //        add.fire();
     }
 
@@ -132,7 +132,7 @@ public class ManageBus_Controller implements Initializable {
                 String to = returnto.getSelectionModel().getSelectedItem().toString();
                 if (company.getSelectionModel() != null) {
                     String companyinfo = "fluk";
-                    if (departdate.getValue()!=null && returndate.getValue()!=null) {
+                    if (departdate.getValue() != null && returndate.getValue() != null) {
                         if (departtime.getText().length() + returntime.getText().length() == 10) {
 
                             String[] depart_time = departtime.getText().split(":");
