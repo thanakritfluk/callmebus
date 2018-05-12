@@ -4,100 +4,168 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageBus_Controller">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageBus_Controller">
    <children>
-      <AnchorPane prefHeight="547.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="547.0" fitWidth="600.0" pickOnBounds="true">
-               <image>
-                  <Image url="@Image/ManageBG.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="13.0" layoutY="7.0" prefHeight="49.0" prefWidth="221.0" text="Bus Manager">
-               <font>
-                  <Font name="MV Boli" size="34.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" height="38.79" radius="18.895" spread="0.54" width="38.79" />
-               </effect>
-            </Label>
-            <Button fx:id="add" layoutX="439.0" layoutY="508.0" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="67.0" text="Add" />
-            <Button fx:id="remove" layoutX="518.0" layoutY="508.0" mnemonicParsing="false" onAction="#removeData" prefHeight="32.0" prefWidth="67.0" text="Remove" />
-            <Label layoutX="368.0" layoutY="119.0" prefHeight="25.0" prefWidth="150.0" text="Coach Company">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" spread="0.86" />
-               </effect>
-            </Label>
-            <ComboBox fx:id="company" layoutX="368.0" layoutY="151.0" prefHeight="19.0" prefWidth="150.0" />
-            <Label layoutX="21.0" layoutY="119.0" prefHeight="25.0" prefWidth="150.0" text="Depart From">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" spread="0.86" />
-               </effect>
-            </Label>
-            <ComboBox fx:id="departfrom" layoutX="21.0" layoutY="151.0" prefWidth="150.0" />
-            <Label />
-            <Label layoutX="96.0" layoutY="189.0" prefHeight="25.0" prefWidth="150.0" text="Depart Date &amp; Time">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" spread="0.86" />
-               </effect>
-            </Label>
-            <Label layoutX="373.0" layoutY="191.0" prefHeight="21.0" prefWidth="139.0" text="Return Date &amp; Time">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" spread="0.86" />
-               </effect>
-            </Label>
-            <Label layoutX="194.0" layoutY="121.0" prefHeight="1.0" prefWidth="150.0" text="Return To">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <effect>
-                  <DropShadow color="WHITE" spread="0.86" />
-               </effect>
-            </Label>
-            <ComboBox fx:id="returnto" layoutX="194.0" layoutY="151.0" prefWidth="150.0" />
-            <Button fx:id="main" layoutX="526.0" layoutY="8.0" mnemonicParsing="false" onMousePressed="#backToMenu" prefHeight="48.0" prefWidth="67.0" text="Main" />
-            <TableView fx:id="manage" layoutX="13.0" layoutY="262.0" prefHeight="233.0" prefWidth="573.0">
-              <columns>
-                <TableColumn fx:id="id" prefWidth="59.999972343444824" text="ID" />
-                <TableColumn fx:id="from" prefWidth="77.33336639404297" text="From" />
-                  <TableColumn fx:id="to" prefWidth="81.3333740234375" text="To" />
-                  <TableColumn fx:id="departinfo" prefWidth="111.33332824707031" text="Dep. Date &amp; Time" />
-                  <TableColumn fx:id="arriveinfo" prefWidth="102.0" text="Arr. Date &amp; Time" />
-                  <TableColumn fx:id="companyinfo" prefWidth="75.99996948242188" text="Company" />
-                  <TableColumn fx:id="cost" prefWidth="62.66670735677087" text="Cost" />
-              </columns>
-            </TableView>
-            <RadioButton fx:id="roundtrip" layoutX="21.0" layoutY="78.0" mnemonicParsing="false" text="Round Trip" />
-            <RadioButton fx:id="oneway" layoutX="190.0" layoutY="78.0" mnemonicParsing="false" text="One Way" />
-            <DatePicker fx:id="departdate" layoutX="14.0" layoutY="224.0" />
-            <DatePicker fx:id="returndate" layoutX="300.0" layoutY="224.0" />
-            <TextField fx:id="departtime" layoutX="195.0" layoutY="225.0" prefHeight="26.0" prefWidth="101.0" promptText="hour:minute" />
-            <TextField fx:id="returntime" layoutX="484.0" layoutY="224.0" prefHeight="26.0" prefWidth="101.0" promptText="hour:minute" />
-            <Label fx:id="status" layoutX="14.0" layoutY="508.0" prefHeight="32.0" prefWidth="274.0" text="Status" />
-         </children>
-      </AnchorPane>
+      <ScrollPane prefHeight="573.0" prefWidth="706.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="789.0" prefWidth="691.0" stylesheets="@ManageBus_Interface.css">
+               <children>
+                  <Pane prefHeight="66.0" prefWidth="620.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow color="#d6d4d4" />
+                     </effect>
+                     <children>
+                        <Label layoutX="78.0" layoutY="21.0" prefHeight="25.0" prefWidth="150.0" text="Company" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="27.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8-company_filled.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="392.0" fitWidth="695.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/ONGXW50.jpeg" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.36" />
+                     </effect>
+                  </ImageView>
+                  <Button fx:id="add" layoutX="158.0" layoutY="733.0" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="181.0" text="Add">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="remove" layoutX="368.0" layoutY="733.0" mnemonicParsing="false" onAction="#removeData" prefHeight="32.0" prefWidth="181.0" text="Remove">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label />
+                  <Button fx:id="main" layoutX="572.0" layoutY="42.0" mnemonicParsing="false" onAction="#back" prefHeight="48.0" prefWidth="67.0" />
+                  <Pane layoutX="27.0" layoutY="449.0" prefHeight="243.0" prefWidth="637.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="manage" layoutX="22.0" layoutY="72.0" prefHeight="151.0" prefWidth="592.0">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="59.999972343444824" styleClass="columnid" text="ID" />
+                              <TableColumn fx:id="from" prefWidth="77.33336639404297" text="From" />
+                              <TableColumn fx:id="to" prefWidth="81.3333740234375" text="To" />
+                              <TableColumn fx:id="departinfo" prefWidth="121.0" text="Dep. Date &amp; Time" />
+                              <TableColumn fx:id="arriveinfo" prefWidth="112.0" text="Retr. Date &amp; Time" />
+                              <TableColumn fx:id="companyinfo" prefWidth="75.0" text="Company" />
+                              <TableColumn fx:id="cost" prefWidth="62.0" text="Cost" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitHeight="41.0" fitWidth="42.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8-list.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="74.0" layoutY="28.0" prefHeight="25.0" prefWidth="150.0" text="Bus timetable list" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow color="#ddd9d9" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutY="28.0" prefHeight="76.0" prefWidth="447.0" style="-fx-background-color: #4985FF;">
+                     <children>
+                        <Label layoutX="49.0" layoutY="14.0" prefHeight="49.0" prefWidth="221.0" text="Timetable" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow color="#d0cccc" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="319.0" prefHeight="106.0" prefWidth="638.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="80.0" layoutY="23.0" prefHeight="25.0" prefWidth="150.0" text="Depart Date &amp; Time" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="61.0" prefHeight="21.0" prefWidth="143.0" text="Return Date &amp; Time" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="departdate" layoutX="243.0" layoutY="22.0" prefWidth="208.0" />
+                        <DatePicker fx:id="returndate" layoutX="243.0" layoutY="58.0" prefWidth="208.0" />
+                        <TextField fx:id="departtime" layoutX="465.0" layoutY="22.0" prefHeight="27.0" prefWidth="91.0" promptText="hour:minute" />
+                        <TextField fx:id="returntime" layoutX="465.0" layoutY="58.0" prefHeight="27.0" prefWidth="91.0" promptText="hour:minute" />
+                        <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="27.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8-calendar_filled.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow color="#dad8d8" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="235.0" prefHeight="66.0" prefWidth="638.0" style="-fx-background-color: white;" stylesheets="@ManageBus_Interface.css">
+                     <children>
+                        <Label layoutX="80.0" layoutY="21.0" prefHeight="25.0" prefWidth="150.0" text="From" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="departfrom" layoutX="147.0" layoutY="20.0" prefWidth="150.0" />
+                        <Label layoutX="320.0" layoutY="23.0" prefHeight="1.0" prefWidth="150.0" text=" To" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="returnto" layoutX="372.0" layoutY="20.0" prefWidth="150.0" />
+                        <ImageView fitHeight="28.0" fitWidth="35.0" layoutX="30.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Image/icons8-location_filled.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow color="#e1dbdb" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="151.0" prefHeight="66.0" prefWidth="638.0" style="-fx-background-color: white;" stylesheets="@ManageBus_Interface.css">
+                     <children>
+                        <Label layoutX="155.0" layoutY="21.0" prefHeight="25.0" prefWidth="97.0" text="Company" textFill="#000000c3">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="company" layoutX="250.0" layoutY="20.0" prefHeight="28.0" prefWidth="197.0" />
+                     </children>
+                     <effect>
+                        <DropShadow color="#e1dbdb" />
+                     </effect>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </FlowPane>

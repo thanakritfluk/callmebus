@@ -1,0 +1,29 @@
+#cancel{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#cancel:hover {
+    --fx-fill-width: bold;
+    -fx-background-color: #ff8e85;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}
+
+#accept{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#accept:hover {
+    --fx-fill-width: bold;
+    -fx-background-color: #9bff91;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}

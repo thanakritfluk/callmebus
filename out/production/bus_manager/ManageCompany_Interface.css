@@ -1,0 +1,47 @@
+#back{
+    -fx-graphic: url("image/icons8-left_4-2.png");
+    -fx-background-color: transparent;
+
+}
+
+#add{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#add:hover{
+    --fx-fill-width: bold;
+    -fx-background-color: #9bff91;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}
+
+#remove{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#remove:hover{
+    --fx-fill-width: bold;
+    -fx-background-color: #ff8e85;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}
+
+.table-view .column-header,.table-view .column-header .filler,.table-view.column-header-background .filler{
+    -fx-background-color: rgba(141, 217, 255, 0.21);
+    -fx-border-color: rgba(103, 162, 198, 0.2);
+}
+
+
+
+.table-row-cell:selected{
+    -fx-background-color: rgba(141,217,255,0.62);
+
+}

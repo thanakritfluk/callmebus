@@ -1,0 +1,42 @@
+#timetable{
+    --fx-fill-width: bold;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-graphic: url("image/icons8-timetable.png");
+}
+
+#timetable:hover{
+    --fx-fill-width: bold;
+    -fx-background-color: #769fff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(255, 255, 255);
+}
+
+#company{
+    --fx-fill-width: bold;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-graphic: url("image/icons8-tour_bus_.png");
+}
+
+#company:hover{
+    --fx-fill-width: bold;
+    -fx-background-color: #769fff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(255, 255, 255);
+}
+
+#menu {
+    -fx-graphic: url("image/icons8-home.png");
+    -fx-background-color: transparent;
+}
+
+#menu:hover {
+    -fx-graphic: url("image/big-cons8-home.png");
+    -fx-effect: dropshadow(gaussian, white, 10, 1.0, 100, 100);
+}
+

@@ -1,37 +1,38 @@
 #ticket {
     -fx-fill-width: bold;
     -fx-background-color: snow;
-    -fx-background-radius: 22;
-    -fx-text-fill: cornflowerblue;
-    -fx-text-alignment: center;
-    -fx-font-size: 20;
-    -fx-font-family: "Droid Serif";
+    -fx-background-radius: 0;
     -fx-graphic: shadow;
     -fx-pref-width: 130px;
 }
 
 #ticket:hover {
-    -fx-background-color: #b6fcd5;
-    -fx-text-fill: cornflowerblue;
+    -fx-fill-width: bold;
+    -fx-background-color: #4bbdff;
+    -fx-background-radius: 0;
+    -fx-font-color: rgb(255, 255, 255);
 
 }
 
 #manager {
     -fx-fill-width: bold;
     -fx-background-color: snow;
-    -fx-background-radius: 22;
-    -fx-text-fill: cornflowerblue;
-    -fx-text-alignment: center;
-    -fx-font-size: 20;
-    -fx-font-family: "Droid Serif";
+    -fx-background-radius: 0;
     -fx-pref-width: 130px;
 }
 
 #manager:hover {
     -fx-fill-width: bold;
-    -fx-background-color: #b6fcd5;
-    -fx-background-radius: 22;
-    -fx-text-fill: cornflowerblue;
+    -fx-background-color: #4bbdff;
+    -fx-background-radius: 0;
+    -fx-font-color: rgb(255, 255, 255);
 }
 
+#exit{
+    -fx-graphic: url("image/Export_52px.png");
+    -fx-background-color: transparent;
+}
+#exit:hover{
+    -fx-effect: dropshadow(gaussian, #fdfeff, 20, 1.0, 100, 100);
+}
 

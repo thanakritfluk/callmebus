@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="619.0" prefWidth="574.0" style="-fx-background-color: #e6e6e6;" stylesheets="@Payment.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Payment_Controller">
+   <children>
+      <Button fx:id="cancel" layoutX="296.0" layoutY="559.0" mnemonicParsing="false" onAction="#cancelButtonHandler" prefHeight="32.0" prefWidth="174.0" text="Cancel">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="accept" layoutX="102.0" layoutY="559.0" mnemonicParsing="false" onAction="#acceptButtonHandler" prefHeight="32.0" prefWidth="174.0" text="Accept">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Button>
+      <Pane layoutX="25.0" layoutY="143.0" prefHeight="383.0" prefWidth="524.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="68.0" layoutY="168.0" text="Coach Company:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="197.0" text="Bus Class:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="27.0" text="From:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="285.0" layoutY="27.0" prefHeight="17.0" prefWidth="53.0" text="To:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="88.0" text="Dep. date:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="122.0" text="Retr. date:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="339.0" text="Total cost:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="company" layoutX="226.0" layoutY="168.0" prefHeight="20.0" prefWidth="241.0" text="cc">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="busclass" layoutX="172.0" layoutY="197.0" prefHeight="20.0" prefWidth="214.0" text="c">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="from" layoutX="131.0" layoutY="27.0" text="f">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="to" layoutX="332.0" layoutY="27.0" text="t">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="depart_date" layoutX="176.0" layoutY="88.0" text="d">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="return_date" layoutX="178.0" layoutY="122.0" text="r">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalcost" layoutX="170.0" layoutY="339.0" prefHeight="20.0" prefWidth="115.0" text="Total">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="28.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8-location_filled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="28.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8-calendar_filled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="28.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8-bus_filled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="76.0" fitWidth="89.0" layoutX="388.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/21bus.gif" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" layoutX="134.0" layoutY="71.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="336.0" layoutY="71.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="134.0" layoutY="156.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="336.0" layoutY="156.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="134.0" layoutY="262.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Line endX="100.0" layoutX="336.0" layoutY="262.0" startX="-100.0" stroke="#c9c5c5" strokeMiterLimit="15.0" strokeWidth="2.0" />
+            <Label layoutX="34.0" layoutY="314.0" text="Additional cost:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="addcost" layoutX="189.0" layoutY="314.0" prefHeight="20.0" prefWidth="107.0" text="add">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="286.0" text="Ticket cost:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="ticketcost" layoutX="170.0" layoutY="286.0" prefHeight="20.0" prefWidth="115.0" text="ticket">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="228.0" text="Number of seats:" textFill="#4d4b4b">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="seat" layoutX="218.0" layoutY="228.0" prefHeight="20.0" prefWidth="27.0" text="c">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="14.0" prefHeight="77.0" prefWidth="416.0" style="-fx-background-color: #4985FF;">
+         <children>
+            <Label layoutX="73.0" layoutY="15.0" text="Payment" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="42.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow color="#cdc8c8" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

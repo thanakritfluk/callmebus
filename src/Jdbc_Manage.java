@@ -47,12 +47,12 @@ public class Jdbc_Manage {
         return sql.toString();
     }
 
-    public void insertRecord(String tableName, Object... values) {
+    public void insertRecordManage(Object... values) {
         connection = Connect();
         Statement statement;
         try {
             statement = connection.createStatement();
-            String sql = "insert into " + tableName + "(depart,arrive,departinfo,arriveinfo,company,cost)" + " values(";
+            String sql = "insert into " + " managebus " + "(depart,arrive,departinfo,arriveinfo,company,cost)" + " values(";
             sql += createStateMent(values);
             sql += ")";
             System.out.println(sql);
@@ -63,6 +63,25 @@ public class Jdbc_Manage {
         } finally {
             closeConnection();
         }
+    }
+
+    public void insertRecordCompany(String company){
+        connection = Connect();
+        Statement statement;
+        try {
+            statement = connection.createStatement();
+                    String sql = "insert into " + "company" + " (name) " + "values(";
+                    sql += createStateMent(company) ;
+                    sql += ")";
+            System.out.println(sql);
+                    statement.execute(sql);
+        } catch (SQLException e){
+            System.err.println("Cannot excute");
+            e.getErrorCode();
+        } finally {
+            closeConnection();
+        }
+//        insert into company(name)values("uktufkufiuk");
     }
 
 

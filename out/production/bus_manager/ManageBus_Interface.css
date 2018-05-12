@@ -1,0 +1,55 @@
+#add{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#add:hover{
+    -fx-background-color: #9bff91;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}
+
+#remove{
+    --fx-fill-width: bold;
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#remove:hover{
+    -fx-background-color: #ff8e85;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-font-color: rgb(254, 254, 254);
+}
+
+.combo-box{
+    --fx-fill-width: bold;
+    -fx-background-color: rgba(162, 162, 162, 0.13);
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+#main{
+    -fx-graphic: url("image/icons8-home.png");
+    -fx-background-color: transparent;
+}
+
+#main:hover {
+    -fx-graphic: url("image/big-cons8-home.png");
+}
+
+.table-view .column-header,.table-view .column-header .filler,.table-view.column-header-background .filler{
+    -fx-background-color: rgba(141, 217, 255, 0.21);
+    -fx-border-color: rgba(103, 162, 198, 0.2);
+}
+
+.table-row-cell:selected{
+    -fx-background-color: rgba(141,217,255,0.62);
+
+}
+
+

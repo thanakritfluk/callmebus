@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="664.0" prefWidth="600.0" stylesheets="@ManageCompany_Interface.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageCompany_Controller">
+   <children>
+      <Pane layoutY="22.0" prefHeight="75.0" prefWidth="464.0" style="-fx-background-color: #4985FF;">
+         <children>
+            <Label layoutX="100.0" layoutY="14.0" text="Company" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#c3c1c1" />
+         </effect>
+      </Pane>
+      <Pane layoutX="47.0" layoutY="183.0" prefHeight="75.0" prefWidth="505.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#d0cdcd" />
+         </effect>
+         <children>
+            <Label layoutX="88.0" layoutY="27.0" text="Company Name">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="233.0" layoutY="24.0" onAction="#addData" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="29.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8-company_filled.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="add" layoutX="232.0" layoutY="603.0" mnemonicParsing="false" onAction="#addData" prefHeight="36.0" prefWidth="153.0" text="Add">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="remove" layoutX="406.0" layoutY="603.0" mnemonicParsing="false" onAction="#removeData" prefHeight="36.0" prefWidth="153.0" text="Remove">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Button>
+      <Pane layoutX="47.0" layoutY="277.0" prefHeight="272.0" prefWidth="505.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#e4e3e3" />
+         </effect>
+         <children>
+            <TableView fx:id="complist" layoutX="97.0" layoutY="62.0" prefHeight="190.0" prefWidth="312.0">
+              <columns>
+                <TableColumn fx:id="namelist" prefWidth="309.6666717529297" text="Name" />
+              </columns>
+            </TableView>
+            <Label layoutX="69.0" layoutY="21.0" text="Company list">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="28.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/icons8-list.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="back" layoutX="521.0" layoutY="22.0" mnemonicParsing="false" onAction="#back" prefHeight="47.0" prefWidth="51.0" />
+   </children>
+</AnchorPane>

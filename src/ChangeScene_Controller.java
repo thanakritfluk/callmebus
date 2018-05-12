@@ -1,3 +1,4 @@
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,9 +19,9 @@ public class ChangeScene_Controller {
     @FXML
     Button manager;
     @FXML
-    FlowPane main;
+    Button exit;
     @FXML
-    Button menu;
+    FlowPane main;
 
     @FXML
     public void changeScene(Event event, String fxml) {
@@ -45,9 +46,13 @@ public class ChangeScene_Controller {
 
     @FXML
     public void setManagerPressed(MouseEvent mouseEvent) {
-        changeScene(mouseEvent,"ManageBus_Interface.fxml");
+        changeScene(mouseEvent,"Login_Interface.fxml");
         System.out.println("Manager clicked");
     }
 
 
+    @FXML
+    public void exit(){
+        System.exit(1);
+    }
 }

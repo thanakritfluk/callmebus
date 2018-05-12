@@ -9,102 +9,111 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="609.0" stylesheets="@Booking_Interface.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking_Controller">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="605.0" stylesheets="@Booking_Interface.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Booking_Controller">
    <children>
-      <AnchorPane prefHeight="458.0" prefWidth="622.0">
+      <AnchorPane prefHeight="732.0" prefWidth="606.0" style="-fx-background-color: #e6e6e6;">
          <children>
-            <ImageView fitHeight="466.0" fitWidth="623.0" layoutX="-5.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" pickOnBounds="true">
+            <ImageView fitHeight="334.0" fitWidth="614.0" layoutX="-8.0" layoutY="-14.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.6" pickOnBounds="true">
                <image>
-                  <Image url="@Image/BuyTicketBG.png" />
+                  <Image url="@Image/ONGXWJ0.jpg" />
                </image>
             </ImageView>
-            <RadioButton fx:id="roundtrip" layoutX="160.0" layoutY="101.0" mnemonicParsing="false" text="Round Trip" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </RadioButton>
-            <RadioButton fx:id="oneway" layoutX="23.0" layoutY="97.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="One Way" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </RadioButton>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="292.0" text="Booking Ticket" textFill="WHITE">
-               <font>
-                  <Font name="Yu Gothic Regular" size="38.0" />
-               </font>
+            <Pane layoutX="33.0" layoutY="178.0" prefHeight="61.0" prefWidth="543.0" style="-fx-background-color: white;">
                <effect>
-                  <DropShadow color="#141314a3" radius="12.965" spread="0.71" width="32.86" />
+                  <DropShadow color="#d0cccc" height="17.96" radius="9.24" />
                </effect>
-            </Label>
-            <ComboBox fx:id="depart" layoutX="193.0" layoutY="176.0" prefWidth="150.0" />
-            <ComboBox fx:id="returndate" layoutX="193.0" layoutY="300.0" prefWidth="150.0" />
-            <ComboBox fx:id="daparttime" layoutX="352.0" layoutY="256.0" prefHeight="25.0" prefWidth="52.0" />
-            <ComboBox fx:id="departdate" layoutX="193.0" layoutY="256.0" prefWidth="150.0" />
-            <ComboBox fx:id="returntime" layoutX="352.0" layoutY="300.0" prefHeight="25.0" prefWidth="52.0" />
-            <ComboBox fx:id="company" layoutX="193.0" layoutY="345.0" prefWidth="150.0" />
-            <ComboBox fx:id="arrive" layoutX="193.0" layoutY="216.0" prefWidth="150.0" />
-            <Button fx:id="bookbutton" layoutX="494.0" layoutY="371.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="103.0" stylesheets="@Booking_Interface.css" text="Booking" textFill="#3c77ff">
+            </Pane>
+            <Pane layoutX="-3.0" layoutY="13.0" prefHeight="74.0" prefWidth="420.0" style="-fx-background-color: #6495ED;">
+               <children>
+                  <Label layoutX="27.0" layoutY="18.0" prefHeight="44.0" prefWidth="292.0" text="Booking Ticket" textFill="#ffffffe3">
+                     <font>
+                        <Font name="Arial" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow color="#a6c8d7" />
+               </effect>
+            </Pane>
+            <Button fx:id="bookbutton" layoutX="93.0" layoutY="642.0" mnemonicParsing="false" onAction="#handleBooking" prefHeight="44.0" prefWidth="420.0" stylesheets="@Booking_Interface.css" text="Book ticket" textFill="#f8f7f7">
                <font>
                   <Font size="20.0" />
                </font>
+               <effect>
+                  <DropShadow color="#c3bebe" />
+               </effect>
             </Button>
-            <ImageView fx:id="preview" fitHeight="156.0" fitWidth="225.0" layoutX="363.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="23.0" layoutY="255.0" prefHeight="27.0" prefWidth="163.0" text="Depart Date &amp; Time" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="47.69" radius="22.6025" spread="0.56" width="44.72" />
-               </effect>
-            </Label>
-            <Label layoutX="23.0" layoutY="300.0" prefHeight="27.0" prefWidth="163.0" text="Return Date &amp; Time" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="41.52" radius="20.2575" spread="0.58" width="41.51" />
-               </effect>
-            </Label>
-            <Label layoutX="23.0" layoutY="345.0" prefHeight="27.0" prefWidth="137.0" text="Coach Company" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="47.44" radius="23.2825" spread="0.51" width="47.69" />
-               </effect>
-            </Label>
-            <Label layoutX="23.0" layoutY="395.0" prefHeight="27.0" prefWidth="120.0" text="Numer of Seat" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="41.76" radius="20.38" spread="0.53" width="41.76" />
-               </effect>
-            </Label>
-            <Label layoutX="23.0" layoutY="215.0" prefHeight="25.0" prefWidth="115.0" text="Arrive To" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="47.69" radius="21.862499999999997" spread="0.51" width="41.76" />
-               </effect>
-            </Label>
-            <Label layoutX="23.0" layoutY="175.0" prefHeight="25.0" prefWidth="115.0" text="Depart From" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#9ccaff" height="41.76" radius="21.119999999999997" spread="0.5" width="44.72" />
-               </effect>
-            </Label>
-            <Button fx:id="menu" layoutX="524.0" mnemonicParsing="false" onMousePressed="#backToMenu" prefHeight="39.0" prefWidth="87.0" text="Menu">
+            <Button id="menu" fx:id="menu" layoutX="522.0" layoutY="24.0" mnemonicParsing="false" onAction="#backToMenu" onMousePressed="#backToMenu" prefHeight="52.0" prefWidth="62.0">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <ComboBox fx:id="seat" layoutX="193.0" layoutY="396.0" prefWidth="150.0" />
+            <Pane layoutX="32.0" layoutY="259.0" prefHeight="117.0" prefWidth="543.0" style="-fx-background-color: white;">
+               <children>
+                  <ComboBox fx:id="depart" layoutX="237.0" layoutY="22.0" prefHeight="27.0" prefWidth="150.0" />
+                  <Label layoutX="106.0" layoutY="70.0" prefHeight="25.0" prefWidth="115.0" text="To" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="23.0" prefHeight="25.0" prefWidth="115.0" text="From" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="arrive" layoutX="237.0" layoutY="69.0" prefWidth="150.0" />
+               </children>
+               <effect>
+                  <DropShadow color="#dad7d7" />
+               </effect>
+            </Pane>
+            <Pane layoutX="32.0" layoutY="395.0" prefHeight="207.0" prefWidth="543.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="28.0" layoutY="34.0" prefHeight="27.0" prefWidth="163.0" text="Date &amp; Time" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="148.0" prefHeight="27.0" prefWidth="137.0" text="Coach Company" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="90.0" prefHeight="27.0" prefWidth="127.0" text="Number of Seat" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="datetime" layoutX="153.0" layoutY="29.0" prefHeight="37.0" prefWidth="350.0" />
+                  <ComboBox fx:id="seat" layoutX="179.0" layoutY="91.0" onAction="#setSeat" prefHeight="25.0" prefWidth="71.0" />
+                  <Label fx:id="company" layoutX="178.0" layoutY="151.0" prefHeight="22.0" prefWidth="263.0" text="company">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="280.0" layoutY="90.0" prefHeight="27.0" prefWidth="48.0" text="Class" textFill="#726d6d">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="busclass" layoutX="353.0" layoutY="91.0" prefWidth="150.0" />
+               </children>
+               <effect>
+                  <DropShadow color="#e8e2e2" />
+               </effect></Pane>
+            <RadioButton fx:id="roundtrip" layoutX="332.0" layoutY="197.0" mnemonicParsing="false" text="Round Trip" textFill="#726d6d">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="oneway" layoutX="163.0" layoutY="191.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="One Way" textFill="#726d6d">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </RadioButton>
          </children>
       </AnchorPane>
    </children>

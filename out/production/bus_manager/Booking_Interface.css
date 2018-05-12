@@ -28,40 +28,41 @@
 }
 
 #menu {
-    --fx-fill-width: bold;
-    -fx-background-color: snow;
-    -fx-background-radius: 0;
-    -fx-text-fill: cornflowerblue;
-    -fx-text-alignment: center;
-    -fx-font-size: 20;
-    -fx-font-family: "Droid Serif";
-    -fx-graphic: shadow;
-    -fx-pref-width: 85px;
-    -fx-pref-height: 40px;
+    -fx-graphic: url("image/icons8-home.png");
+    -fx-background-color: transparent;
 }
 
 #menu:hover {
-    -fx-background-color: #b6fcd5;
+    -fx-graphic: url("image/big-cons8-home.png");
+    -fx-effect: dropshadow(gaussian, white, 10, 1.0, 100, 100);
 }
 
 #bookbutton {
-
+    --fx-fill-width: bold;
+    -fx-background-color: #5a75ff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
 }
 
 #bookbutton:hover{
-
+    --fx-fill-width: bold;
+    -fx-background-color: #6e9cff;
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+    -fx-pref-height: 52;
+    -fx-pref-width: 435;
 }
 
 .combo-box{
-    -fx-border: 1px solid #AAA;
-    -fx-color: cornflowerblue;
-    -fx-font-size: inherit;
-    -fx-margin: 20px;
-    -fx-overflow: hidden;
-    -fx-padding: 5px 10px;
-    -fx-text-overflow: ellipsis;
-    -fx-white-space: nowrap;
-    -fx-width: 300px;
+    --fx-fill-width: bold;
+    -fx-background-color: rgba(162, 162, 162, 0.13);
+    -fx-background-radius: 0;
+    -fx-graphic: shadow;
+}
+
+
+.label{
+    -fx-color: red;
 }
 
 
