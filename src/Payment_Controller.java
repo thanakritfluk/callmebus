@@ -1,24 +1,16 @@
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.awt.Font;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -48,25 +40,10 @@ public class Payment_Controller implements Initializable {
     Label ticketcost;
     @FXML
     Label seat;
-
-    @FXML
-    public void changeScene(Event event, String fxml) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            Scene Scene = new Scene(root);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(Scene);
-            Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-            window.setX((primScreenBounds.getWidth() - window.getWidth()) / 2);
-            window.setY((primScreenBounds.getHeight() - window.getHeight()) / 2);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    private final SceneChanger sceneChanger = new SceneChanger();
 
     public void cancelButtonHandler(ActionEvent mouseEvent){
-        changeScene(mouseEvent, "Booking_Interface.fxml");
-        System.out.println("Canceled the reservation.");
+        sceneChanger.changeScene(mouseEvent, "Booking_Interface.fxml");
     }
 
     public void acceptButtonHandler(){

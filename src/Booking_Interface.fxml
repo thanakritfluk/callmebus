@@ -89,17 +89,13 @@
                   </Label>
                   <ComboBox fx:id="datetime" layoutX="153.0" layoutY="29.0" prefHeight="37.0" prefWidth="350.0" />
                   <ComboBox fx:id="seat" layoutX="179.0" layoutY="91.0" onAction="#setSeat" prefHeight="25.0" prefWidth="71.0" />
-                  <Label fx:id="company" layoutX="178.0" layoutY="151.0" prefHeight="22.0" prefWidth="263.0" text="company">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="280.0" layoutY="90.0" prefHeight="27.0" prefWidth="48.0" text="Class" textFill="#726d6d">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </Label>
                   <ComboBox fx:id="busclass" layoutX="353.0" layoutY="91.0" prefWidth="150.0" />
+                  <ComboBox fx:id="company" layoutX="179.0" layoutY="147.0" prefHeight="27.0" prefWidth="183.0" />
                </children>
                <effect>
                   <DropShadow color="#e8e2e2" />

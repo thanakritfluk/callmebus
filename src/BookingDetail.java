@@ -1,5 +1,4 @@
 public class BookingDetail {
-
     private String from;
     private String to;
     private String depart_time;

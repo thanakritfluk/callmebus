@@ -4,17 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -38,13 +31,12 @@ public class Booking_Controller implements Initializable {
     @FXML
     ComboBox datetime;
     @FXML
-    Label company;
+    ComboBox company;
     @FXML
     ComboBox seat;
     @FXML
     ComboBox<BusClass> busclass;
 
-//    public   BookingDetail bookingDetail;
     private Jdbc_Manage connect = new Jdbc_Manage();
     private ObservableList<Object> dataCombobox;
     private ToggleGroup group = new ToggleGroup();
@@ -65,22 +57,50 @@ public class Booking_Controller implements Initializable {
         oneway.setToggleGroup(group);
         roundtrip.setToggleGroup(group);
         loadDataDepart();
-        depart.setOnAction(getDateEventHandler());
-        arrive.setOnAction(getDateEventHandler());
-        setCompany();
+
+        roundtrip.setOnAction(new EventHandler<ActionEvent>() {
+            /**
+             * Invoked when a specific event of the type for which this handler is
+             * registered happens.
+             *
+             * @param event the event which occurred
+             */
+            @Override
+            public void handle(ActionEvent event) {
+                roundTrip();
+                depart.setOnAction(getRoundTripDateEventHandler());
+                arrive.setOnAction(getRoundTripDateEventHandler());
+                setRoundTripCompany();
+            }
+        });
+        oneway.setOnAction(new EventHandler<ActionEvent>() {
+            /**
+             * Invoked when a specific event of the type for which this handler is
+             * registered happens.
+             *
+             * @param event the event which occurred
+             */
+            @Override
+            public void handle(ActionEvent event) {
+                oneWay();
+                depart.setOnAction(getOneWayDateEventHandler());
+                arrive.setOnAction(getOneWayDateEventHandler());
+                setOneWayCompany();
+            }
+        });
         setBusClass();
         setSeat();
     }
 
-    public void setCompany() {
+    public void setOneWayCompany() {
         datetime.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                company.setText(null);
+                company.getItems().clear();
                 for (int i = 0; i < managerDetailsList.size(); i++) {
-                    String arr = "Depart: " +managerDetailsList.get(i).getDepartinfo()  + " Arrive: " +managerDetailsList.get(i).getArriveinfo() ;
+                    String arr = "Depart: " + managerDetailsList.get(i).getDepartinfo();
                     if (arr.contains(datetime.getSelectionModel().getSelectedItem().toString())) {
-                        company.setText(managerDetailsList.get(i).getCompany());
+                        company.getItems().add(managerDetailsList.get(i).getCompany());
 
                     }
                 }
@@ -88,26 +108,71 @@ public class Booking_Controller implements Initializable {
         });
     }
 
-    public EventHandler getDateEventHandler() {
+
+    public void setRoundTripCompany() {
+        datetime.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                company.getItems().clear();
+                for (int i = 0; i < managerDetailsList.size(); i++) {
+                    String arr = "Depart: " + managerDetailsList.get(i).getDepartinfo() + " Arrive: " + managerDetailsList.get(i).getArriveinfo();
+                        if (arr.contains(datetime.getSelectionModel().getSelectedItem().toString())) {
+                            company.getItems().add(managerDetailsList.get(i).getCompany());
+                        }
+                }
+            }
+        });
+    }
+
+    public EventHandler getOneWayDateEventHandler() {
         EventHandler eventHandler = new EventHandler() {
             @Override
             public void handle(Event event) {
-                datetime.getItems().clear();
-                for (ManagerDetail managerDetail : managerDetailsList) {
-                    if (arrive.getSelectionModel().getSelectedItem() == null) return;
-                    if (depart.getSelectionModel().getSelectedItem() == null) return;
-                    if (managerDetail.getDepart().equals(depart.getSelectionModel().getSelectedItem()) && managerDetail.getArrive().equals(arrive.getSelectionModel().getSelectedItem())) {
-                        datetime.setPromptText("");
-                        String arr = "Depart: " + managerDetail.getDepartinfo() + " Arrive: " + managerDetail.getArriveinfo();
-                        datetime.getItems().add(arr);
-                    }
-                }
-                if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
+                oneWay();
             }
         };
         return eventHandler;
     }
 
+    void oneWay() {
+        datetime.getItems().clear();
+        for (ManagerDetail managerDetail : managerDetailsList) {
+            if (depart.getSelectionModel().getSelectedItem() == null) return;
+            if (arrive.getSelectionModel().getSelectedItem() == null) return;
+            if (managerDetail.getDepart().equals(depart.getSelectionModel().getSelectedItem()) && managerDetail.getArrive().equals(arrive.getSelectionModel().getSelectedItem())
+                    && managerDetail.getArriveinfo() == null) {
+                datetime.setPromptText("");
+                    String arr = "Depart: " + managerDetail.getDepartinfo();
+                    datetime.getItems().add(arr);
+            }
+        }
+        if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
+    }
+
+    public EventHandler getRoundTripDateEventHandler() {
+        EventHandler eventHandler = new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                roundTrip();
+            }
+        };
+        return eventHandler;
+    }
+
+    void roundTrip() {
+        datetime.getItems().clear();
+        for (ManagerDetail managerDetail : managerDetailsList) {
+            if (arrive.getSelectionModel().getSelectedItem() == null) return;
+            if (depart.getSelectionModel().getSelectedItem() == null) return;
+            if (managerDetail.getDepart().equals(depart.getSelectionModel().getSelectedItem()) && managerDetail.getArrive().equals(arrive.getSelectionModel().getSelectedItem())
+                    && managerDetail.getArriveinfo() != null) {
+                datetime.setPromptText("");
+                String arr = "Depart: " + managerDetail.getDepartinfo() + " Arrive: " + managerDetail.getArriveinfo();
+                datetime.getItems().add(arr);
+            }
+        }
+        if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
+    }
 
     public List<ManagerDetail> loadAllData() {
         ArrayList<ManagerDetail> list = new ArrayList<>();
@@ -145,7 +210,6 @@ public class Booking_Controller implements Initializable {
         } catch (SQLException ex) {
             System.err.println("Error" + ex);
         }
-
         depart.setItems(null);
         depart.setItems(dataCombobox);
         arrive.setItems(null);
@@ -160,18 +224,17 @@ public class Booking_Controller implements Initializable {
     }
 
 
-
-    public void setSeat(){
-        seat.getItems().addAll(1,2,3,4,5);
+    public void setSeat() {
+        seat.getItems().addAll(1, 2, 3, 4, 5);
         seat.getSelectionModel();
     }
 
-    public void setBusClass(){
+    public void setBusClass() {
         busclass.getItems().addAll(BusClass.values());
         busclass.getSelectionModel();
     }
 
-    public double calculateTicketCost(String from,String to){
+    public double calculateTicketCost(String from, String to) {
         double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", from));
         double depart_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", from));
         double return_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", to));
@@ -181,7 +244,7 @@ public class Booking_Controller implements Initializable {
         return price;
     }
 
-    public double price_Calculate(double distance){
+    public double price_Calculate(double distance) {
         double price = 0;
         if (distance >= 1000) return price = 1000;
         else if (distance >= 700) return price = 750;
@@ -191,31 +254,31 @@ public class Booking_Controller implements Initializable {
         else return price = 100;
     }
 
-    public String totalCost(double ticketCost,double addCost,double seat){
-        return String.valueOf((ticketCost+addCost)*seat);
+    public String totalCost(double ticketCost, double addCost, double seat) {
+        return String.valueOf((ticketCost + addCost) * seat);
     }
 
-    public void setBookingDetail(){
-        double ticketCost = calculateTicketCost(depart.getSelectionModel().getSelectedItem().toString(),arrive.getSelectionModel().getSelectedItem().toString());
+    public void setBookingDetail() {
+        double ticketCost = calculateTicketCost(depart.getSelectionModel().getSelectedItem().toString(), arrive.getSelectionModel().getSelectedItem().toString());
         String[] dateTime = datetime.getSelectionModel().getSelectedItem().toString().split("A");
         double seats = Double.parseDouble(seat.getSelectionModel().getSelectedItem().toString());
-        bookingDetail = new BookingDetail(depart.getSelectionModel().getSelectedItem().toString(),arrive.getSelectionModel().getSelectedItem().toString(),
-                dateTime[0].replaceAll("Depart: ","").toString(),
-                dateTime[1].replaceAll("rrive: ","").toString(),
-                company.getText(),busclass.getSelectionModel().getSelectedItem().toString(),
-                String.valueOf(ticketCost*seats),String.valueOf(busclass.getSelectionModel().getSelectedItem().getValue()*seats),
-                totalCost(ticketCost,busclass.getSelectionModel().getSelectedItem().getValue(),seats),
+        bookingDetail = new BookingDetail(depart.getSelectionModel().getSelectedItem().toString(), arrive.getSelectionModel().getSelectedItem().toString(),
+                dateTime[0].replaceAll("Depart: ", "").toString(),
+                dateTime[1].replaceAll("rrive: ", "").toString(),
+                company.getSelectionModel().getSelectedItem().toString(), busclass.getSelectionModel().getSelectedItem().toString(),
+                String.valueOf(ticketCost * seats), String.valueOf(busclass.getSelectionModel().getSelectedItem().getValue() * seats),
+                totalCost(ticketCost, busclass.getSelectionModel().getSelectedItem().getValue(), seats),
                 seat.getSelectionModel().getSelectedItem().toString());
     }
 
-    public static BookingDetail getBookingDetail(){
+    public static BookingDetail getBookingDetail() {
         return bookingDetail;
     }
 
-    public void handleBooking(ActionEvent mouseEvent){
+    public void handleBooking(ActionEvent mouseEvent) {
         setBookingDetail();
         SceneChanger sceneChanger = new SceneChanger();
-        sceneChanger.changeScene(mouseEvent,"Payment.fxml");
+        sceneChanger.changeScene(mouseEvent, "Payment.fxml");
         System.out.println("Go to payment window.");
 
     }

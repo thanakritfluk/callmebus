@@ -1,19 +1,11 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -56,12 +48,16 @@ public class ManageBus_Controller implements Initializable {
     TableColumn<ManagerDetail, Double> cost;
     @FXML
     Button remove;
+    @FXML
+    RadioButton oneway;
+    @FXML
+    RadioButton roundtrip;
 
     private ObservableList<ManagerDetail> data;
     private ObservableList dataCombobox;
     private Jdbc_Manage connect = new Jdbc_Manage();
     private Alert alert = new Alert(Alert.AlertType.ERROR);
-
+    private ToggleGroup toggleGroup = new ToggleGroup();
 
     /**
      * Called to initialize a controller after its root element has been
@@ -74,6 +70,8 @@ public class ManageBus_Controller implements Initializable {
     @Override
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        oneway.setToggleGroup(toggleGroup);
+        roundtrip.setToggleGroup(toggleGroup);
         connect = new Jdbc_Manage();
         //Load Data
         loadDataToCompany();
@@ -84,7 +82,6 @@ public class ManageBus_Controller implements Initializable {
         //Make textField input in right form
         makeRightFormTextField(departtime);
         makeRightFormTextField(returntime);
-
     }
 
     @FXML
@@ -130,36 +127,67 @@ public class ManageBus_Controller implements Initializable {
         alert.showAndWait();
     }
 
+    public double calPriceFromDistance(String depart, String to) {
+        Distance_Cal cal_Distance = new Distance_Cal();
+        double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", depart));
+        double depart_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", depart));
+        double return_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", to));
+        double return_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", to));
+        double price = price_Calculate(cal_Distance.distance(depart_lat, depart_lon, return_lat, return_lon));
+        return price;
+    }
+
+    public void setAddRoundtripCase(String depart, String to, String companyinfo, double price) {
+        if (roundtrip.isSelected()) {
+            if (departdate.getValue() != null && returndate.getValue() != null) {
+                if (checkDate(departdate, returndate)) {
+                    if (departtime.getText().length() == 5 && returntime.getText().length() == 5 && checkTime(departtime, returntime)) {
+                        String[] depart_time = departtime.getText().split(":");
+                        String[] return_time = returntime.getText().split(":");
+                        LocalDateTime departinfo = LocalDateTime.of(departdate.getValue().getYear(), departdate.getValue().getMonth(), departdate.getValue().getDayOfMonth(),
+                                Integer.parseInt(depart_time[0]), Integer.parseInt(depart_time[1]), 00);
+                        LocalDateTime arriveinfo = LocalDateTime.of(returndate.getValue().getYear(), returndate.getValue().getMonth(), returndate.getValue().getDayOfMonth(),
+                                Integer.parseInt(return_time[0]), Integer.parseInt(return_time[1]), 00);
+                        connect.insertRecordManage(depart, to, departinfo, arriveinfo, companyinfo, price);
+                        clearField();
+                        loadDataFromManagebus();
+                    }
+                   else errMsgSet("Error Dialog", "Please input time", "");
+                }
+            } else errMsgSet("Error Dialog", "Please select date", "");
+        }
+    }
+
+    public void setAddOneWayCase(String depart, String to, String companyinfo, double price) {
+        if (oneway.isSelected()) {
+            if (departdate.getValue() != null) {
+                if (departtime.getText().length() == 5) {
+                    String[] depart_time = departtime.getText().split(":");
+                    LocalDateTime departinfo = LocalDateTime.of(departdate.getValue().getYear(), departdate.getValue().getMonth(),
+                            departdate.getValue().getDayOfMonth(), Integer.parseInt(depart_time[0]),
+                            Integer.parseInt(depart_time[1]), 00);
+                    connect.insertRecordManage(depart, to, departinfo, null, companyinfo, price);
+                    clearField();
+                    loadDataFromManagebus();
+                } else errMsgSet("Error Dialog", "Invalid time", "");
+            } else errMsgSet("Error Dialog", "Please select date", "");
+        }
+    }
+
     @FXML
     public void addData() {
-        if (departfrom.getSelectionModel() != null && returnto.getSelectionModel() != null) {
-            String depart = departfrom.getSelectionModel().getSelectedItem().toString();
-            String to = returnto.getSelectionModel().getSelectedItem().toString();
-            if (company.getSelectionModel() != null) {
-                String companyinfo = company.getSelectionModel().getSelectedItem().toString();
-                if (departdate.getValue() != null && returndate.getValue() != null) {
-                    if (checkDate(departdate, returndate)) {
-                        double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", depart));
-                        double depart_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", depart));
-                        double return_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", to));
-                        double return_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", to));
-                        Distance_Cal cal_Distance = new Distance_Cal();
-                        double price = price_Calculate(cal_Distance.distance(depart_lat, depart_lon, return_lat, return_lon));
-                        if (departtime.getText().length() == 5 && returntime.getText().length() == 5 && checkTime(departtime, returntime)) {
-                            String[] depart_time = departtime.getText().split(":");
-                            String[] arrive_time = returntime.getText().split(":");
-                            LocalDateTime departinfo = LocalDateTime.of(departdate.getValue().getYear(), departdate.getValue().getMonth(), departdate.getValue().getDayOfMonth(),
-                                    Integer.parseInt(depart_time[0]), Integer.parseInt(depart_time[1]), 00);
-                            LocalDateTime arriveinfo = LocalDateTime.of(returndate.getValue().getYear(), returndate.getValue().getMonth(), returndate.getValue().getDayOfMonth(),
-                                    Integer.parseInt(arrive_time[0]), Integer.parseInt(arrive_time[1]), 00);
-                            connect.insertRecordManage(depart, to, departinfo, arriveinfo, companyinfo, price);
-                            clearField();
-                            loadDataFromManagebus();
-                        } else errMsgSet("Error Dialog", "Please input valid time", "");
-                    } else errMsgSet("Error Dialog", "Please select valid date", "");
-                } else errMsgSet("Error Dialog", "Please select the date", "");
-            } else errMsgSet("Error Dialog", "Please select the company", "");
-        } else errMsgSet("Error Dialog", "Please select depart and return", "");
+        if (oneway.isSelected() || roundtrip.isSelected()) {
+            if (departfrom.getSelectionModel() != null && returnto.getSelectionModel() != null && !departfrom.getSelectionModel().getSelectedItem().toString().equals(returnto.getSelectionModel().getSelectedItem().toString())) {
+                String depart = departfrom.getSelectionModel().getSelectedItem().toString();
+                String to = returnto.getSelectionModel().getSelectedItem().toString();
+                double price = calPriceFromDistance(depart, to);
+                if (company.getSelectionModel() != null) {
+                    String companyinfo = company.getSelectionModel().getSelectedItem().toString();
+                    setAddRoundtripCase(depart, to, companyinfo, price);
+                    setAddOneWayCase(depart, to, companyinfo, price);
+                }else errMsgSet("Error Dialog", "Please select the company", "");
+            }else errMsgSet("Error Dialog", "Please select depart and return in right condition", "");
+        }else errMsgSet("Error Dialog", "Please select one way or round trip", "");
         manage.getSortOrder().add(departinfo);
     }
 
@@ -182,7 +210,6 @@ public class ManageBus_Controller implements Initializable {
                 int min2 = Integer.parseInt(timeSplit2[1]);
                 if ((hour2 >= 0 && hour2 < 24) && (min2 >= 0 && min2 < 60)) return true;
             } else {
-                System.out.println("Failed.");
                 return false;
             }
         }
@@ -222,7 +249,6 @@ public class ManageBus_Controller implements Initializable {
             dataCombobox = FXCollections.observableArrayList();
             // Execute query and store result in a resultset
             ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM company");
-            System.out.println(rs);
             while (rs.next()) {
                 //get string from db,whichever way
                 dataCombobox.add(rs.getString("name"));
@@ -266,25 +292,11 @@ public class ManageBus_Controller implements Initializable {
         manage.setItems(data);
     }
 
-    @FXML
-    public void changeScene(Event event, String fxml) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            Scene Scene = new Scene(root);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(Scene);
-            Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
-            window.setX((primScreenBounds.getWidth() - window.getWidth()) / 2);
-            window.setY((primScreenBounds.getHeight() - window.getHeight()) / 2);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @FXML
     public void back(ActionEvent mouseEvent) {
-        System.out.println("Back to management");
-        changeScene(mouseEvent, "Management_Interface.fxml");
+        SceneChanger sceneChanger = new SceneChanger();
+        sceneChanger.changeScene(mouseEvent, "Management_Interface.fxml");
     }
 
 }

@@ -1,5 +1,3 @@
-import java.lang.*;
-
 public class Distance_Cal {
 
     public double distance(double lat1, double lon1, double lat2, double lon2) {

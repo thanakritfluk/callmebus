@@ -34,7 +34,10 @@ public class Jdbc_Manage {
     public String createStateMent(Object... values) {
         StringBuilder sql = new StringBuilder();
         for (Object value : values) {
-
+            if (value==null) {
+                sql.append("NULL, ");
+                continue;
+            }
             if (value.getClass().equals(String.class))
                 sql.append("\"").append(value).append("\"");
             else if (value.getClass().equals(LocalDateTime.class)) {
@@ -55,7 +58,6 @@ public class Jdbc_Manage {
             String sql = "insert into " + " managebus " + "(depart,arrive,departinfo,arriveinfo,company,cost)" + " values(";
             sql += createStateMent(values);
             sql += ")";
-            System.out.println(sql);
             statement.execute(sql);
         } catch (SQLException e) {
             System.err.println("Cannot excute");
@@ -73,7 +75,6 @@ public class Jdbc_Manage {
                     String sql = "insert into " + "company" + " (name) " + "values(";
                     sql += createStateMent(company) ;
                     sql += ")";
-            System.out.println(sql);
                     statement.execute(sql);
         } catch (SQLException e){
             System.err.println("Cannot excute");
@@ -81,7 +82,6 @@ public class Jdbc_Manage {
         } finally {
             closeConnection();
         }
-//        insert into company(name)values("uktufkufiuk");
     }
 
 
@@ -91,7 +91,6 @@ public class Jdbc_Manage {
         try {
             statement = connection.createStatement();
             String sql = "delete from " + tablename + " where " + colum + " = " + createStateMent(values);
-            System.out.println(sql);
             statement.execute(sql);
         } catch (SQLException e) {
             e.printStackTrace();
