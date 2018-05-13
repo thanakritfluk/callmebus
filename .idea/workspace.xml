@@ -7,99 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/PropertyManager.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/data/password.properties" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaFXApp/JavaFXApp.jnlp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$1.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$2.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$3.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$4.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$4.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$5.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$5.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$6.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller$6.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Booking_Interface.fxml" afterPath="$PROJECT_DIR$/out/production/bus_manager/Booking_Interface.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Controller.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._BuyTicketBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._ONGXW50.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._ONGXWJ0.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._big-cons8-home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._icons8-left_4-2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._icons8-timetable.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._icons8-tour_bus_filled.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/._manageBG1.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/BG.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/BuyTicketBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/Export_52px.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/Main BG.psd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/ManageBG.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/ManageBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/ManageIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/StartBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/Two Tickets_96px.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/big-cons8-home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/busbus.psd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/home.png" afterPath="$PROJECT_DIR$/out/production/bus_manager/Image/home.png" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/icons8-home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/icons8-left_4-2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Image/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Jdbc_Manage.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Jdbc_Manage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Login_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/Login_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Main.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Main_Css.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Main_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/Main_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Controller.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Interface.fxml" afterPath="$PROJECT_DIR$/out/production/bus_manager/ManageBus_Interface.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bus_manager_jar/bus_manager.jar" afterPath="$PROJECT_DIR$/out/artifacts/bus_manager_jar/bus_manager.jar" />
+      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Login_Controller.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Login_Controller.class" />
       <change beforePath="$PROJECT_DIR$/out/production/bus_manager/ManageCompany_Controller.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/ManageCompany_Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/ManageCompany_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/ManageCompany_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Management_Interface.css" afterPath="$PROJECT_DIR$/out/production/bus_manager/Management_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Payment_Controller.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/Payment_Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/TestJDBC.class" afterPath="$PROJECT_DIR$/out/production/bus_manager/TestJDBC.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/code/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/Password.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/bus_manager/controller/Controller.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/bus_manager/fxml/Main_Interface.fxml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/Booking_Controller.java" afterPath="$PROJECT_DIR$/src/Booking_Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/Booking_Interface.css" afterPath="$PROJECT_DIR$/src/Booking_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/src/Booking_Interface.fxml" afterPath="$PROJECT_DIR$/src/Booking_Interface.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._BuyTicketBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._ONGXW50.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._ONGXWJ0.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._big-cons8-home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._home.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._icons8-left_4-2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._icons8-timetable.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._icons8-tour_bus_filled.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/._manageBG1.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/BG.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/BuyTicketBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/Export_52px.png" afterPath="$PROJECT_DIR$/src/Image/exit.png" />
-      <change beforePath="$PROJECT_DIR$/src/Image/Main BG.psd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/ManageBG.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/ManageBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/ManageIcon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/StartBG.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/Two Tickets_96px.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/big-cons8-home.png" afterPath="$PROJECT_DIR$/src/Image/bighome.png" />
-      <change beforePath="$PROJECT_DIR$/src/Image/busbus.psd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Image/icons8-home.png" afterPath="$PROJECT_DIR$/src/Image/home.png" />
-      <change beforePath="$PROJECT_DIR$/src/Image/icons8-left_4-2.png" afterPath="$PROJECT_DIR$/src/Image/back.png" />
-      <change beforePath="$PROJECT_DIR$/src/Image/logo.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/Jdbc_Manage.java" afterPath="$PROJECT_DIR$/src/Jdbc_Manage.java" />
-      <change beforePath="$PROJECT_DIR$/src/Login_Interface.css" afterPath="$PROJECT_DIR$/src/Login_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main_Interface.css" afterPath="$PROJECT_DIR$/src/Main_Interface.css" />
+      <change beforePath="$PROJECT_DIR$/src/Login_Controller.java" afterPath="$PROJECT_DIR$/src/Login_Controller.java" />
       <change beforePath="$PROJECT_DIR$/src/ManageBus_Controller.java" afterPath="$PROJECT_DIR$/src/ManageBus_Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/ManageBus_Interface.css" afterPath="$PROJECT_DIR$/src/ManageBus_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/src/ManageBus_Interface.fxml" afterPath="$PROJECT_DIR$/src/ManageBus_Interface.fxml" />
       <change beforePath="$PROJECT_DIR$/src/ManageCompany_Controller.java" afterPath="$PROJECT_DIR$/src/ManageCompany_Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/ManageCompany_Interface.css" afterPath="$PROJECT_DIR$/src/ManageCompany_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/src/Management_Interface.css" afterPath="$PROJECT_DIR$/src/Management_Interface.css" />
-      <change beforePath="$PROJECT_DIR$/src/Payment_Controller.java" afterPath="$PROJECT_DIR$/src/Payment_Controller.java" />
-      <change beforePath="$PROJECT_DIR$/src/TestJDBC.java" afterPath="$PROJECT_DIR$/src/TestJDBC.java" />
+      <change beforePath="$PROJECT_DIR$/src/Password.txt" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,82 +100,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Booking_Interface.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Booking_Interface.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="ManagerDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ManagerDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-514">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="42" selection-end-column="11" />
+            <state relative-caret-position="217">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/home.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Payment_Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Payment_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-335">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Booking_Interface.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Booking_Interface.css">
+      <file leaf-file-name="TestJDBC.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TestJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="434">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PropertyManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PropertyManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3627">
+              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SceneChanger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SceneChanger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManageCompany_Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ManageCompany_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2293#2294#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Management_Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Management_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManageBus_Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ManageBus_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bighome.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/bighome.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons8-organization.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/icons8-organization.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons8-bust.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/icons8-bust.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons8-bus_filled.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/icons8-bus_filled.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons8-company_filled.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/icons8-company_filled.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="back.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Image/back.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exit.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Image/exit.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Login_Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Login_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1925#1926#0" expanded="true" />
+                <element signature="e#2387#2388#0" expanded="true" />
+                <element signature="e#2416#2417#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -276,6 +240,7 @@
       <find>name :</find>
       <find>System.out.print</find>
       <find>System.out.println</find>
+      <find>sys</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -314,22 +279,25 @@
         <option value="$PROJECT_DIR$/src/BusClass.java" />
         <option value="$PROJECT_DIR$/src/Login_Interface.fxml" />
         <option value="$PROJECT_DIR$/src/Login_Interface.css" />
-        <option value="$PROJECT_DIR$/src/Password.txt" />
         <option value="$PROJECT_DIR$/src/SceneChanger.java" />
         <option value="$PROJECT_DIR$/src/BookingDetail.java" />
         <option value="$PROJECT_DIR$/src/ChangeScene_Controller.java" />
         <option value="$PROJECT_DIR$/src/Distance_Cal.java" />
-        <option value="$PROJECT_DIR$/src/Login_Controller.java" />
         <option value="$PROJECT_DIR$/src/Management_Controller.java" />
-        <option value="$PROJECT_DIR$/src/ManageCompany_Controller.java" />
-        <option value="$PROJECT_DIR$/src/Jdbc_Manage.java" />
         <option value="$PROJECT_DIR$/src/Province.txt" />
         <option value="$PROJECT_DIR$/src/TestJDBC.java" />
         <option value="$PROJECT_DIR$/src/ManageBus_Interface.css" />
-        <option value="$PROJECT_DIR$/src/ManageBus_Controller.java" />
-        <option value="$PROJECT_DIR$/src/Booking_Controller.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Payment_Controller.java" />
+        <option value="$PROJECT_DIR$/src/Password.txt" />
+        <option value="$PROJECT_DIR$/src/data/PropertyManager.java" />
+        <option value="$PROJECT_DIR$/src/data/password.properties" />
+        <option value="$PROJECT_DIR$/src/PropertyManager.java" />
+        <option value="$PROJECT_DIR$/src/Login_Controller.java" />
+        <option value="$PROJECT_DIR$/src/ManageCompany_Controller.java" />
+        <option value="$PROJECT_DIR$/src/Booking_Controller.java" />
+        <option value="$PROJECT_DIR$/src/Jdbc_Manage.java" />
+        <option value="$PROJECT_DIR$/src/ManageBus_Controller.java" />
       </list>
     </option>
   </component>
@@ -340,7 +308,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="980" />
@@ -403,7 +371,7 @@
               <item name="bus_manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="bus_manager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Image" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bus_manager" type="b2602c69:ProjectViewProjectNode" />
@@ -445,6 +413,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thanakrit\IdeaProjects\bus_manager\src\data" />
       <recent name="C:\Users\Thanakrit\IdeaProjects\bus_manager\src\Image" />
       <recent name="C:\Users\Thanakrit\IdeaProjects\bus_manager\src" />
       <recent name="C:\Users\Thanakrit\IdeaProjects\bus_manager\Image" />
@@ -695,15 +664,15 @@
       <workItem from="1526110533893" duration="21828000" />
       <workItem from="1526183547989" duration="1267000" />
       <workItem from="1526185914235" duration="15516000" />
-      <workItem from="1526212929443" duration="468000" />
+      <workItem from="1526212929443" duration="4132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281107000" />
+    <option name="totallyTimeSpent" value="284771000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -721,6 +690,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1375" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15240084" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -740,7 +710,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286219" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -801,81 +770,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Login_Interface.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/Compressed/itextpdf-5.4.0.jar!/com/itextpdf/text/Paragraph.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManageBus_Interface.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main_Interface.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1085">
           <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BusClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeScene_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompanyDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Distance_Cal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Management_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#615#616#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,139 +791,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SceneChanger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jdbc_Manage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2509">
-          <caret line="86" column="19" lean-forward="false" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1526198610572" expanded="true" signature="1757:1853" ph="insert into managebus" />
-            <marker date="1526198610572" expanded="true" signature="2296:2345" ph="insert into company... " />
-            <marker date="1526198610572" expanded="true" signature="2831:2883" ph="delete from missingValue... " />
-            <marker date="1526198610572" expanded="true" signature="3305:3404" ph="SELECT missi... missingValue" />
-            <marker date="1526198610572" expanded="true" signature="3853:3877" ph="SELECT NAME company" />
-            <marker date="1526198610572" expanded="true" signature="3947:3971" ph="SELECT NAME company" />
-            <marker date="1526198610572" expanded="true" signature="4616:4653" ph="SELECT provi... province_th" />
-            <marker date="1526198610572" expanded="true" signature="5133:5156" ph="SELECT * FRO... managebus" />
-            <marker date="1526198610572" expanded="true" signature="6088:6109" ph="SELECT * FRO... company" />
-            <marker date="1526198610572" expanded="true" signature="6705:6728" ph="SELECT * FRO... managebus" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="62" column="28" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="62" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManagerDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BookingDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManageCompany_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1209">
-          <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Province.txt" />
-    <entry file="file://$PROJECT_DIR$/src/TestJDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ManageBus_Interface.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1798">
           <caret line="58" column="11" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManageBus_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6107">
-          <caret line="210" column="5" lean-forward="false" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Payment_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="72" column="57" lean-forward="false" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Password.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Booking_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4261#4262#0" expanded="false" />
-            <element signature="e#4301#4302#0" expanded="false" />
-            <element signature="e#5341#5342#0" expanded="false" />
-            <element signature="e#5384#5385#0" expanded="false" />
-            <element signature="e#10216#10217#0" expanded="false" />
-            <element signature="e#10252#10253#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,35 +880,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Booking_Interface.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="42" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Image/home.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Booking_Interface.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Image/bighome.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Image/icons8-organization.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1166,6 +908,236 @@
     <entry file="file://$PROJECT_DIR$/src/Image/exit.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Image/bighome.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking_Interface.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Image/home.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking_Interface.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-514">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="42" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManageBus_Interface.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Payment.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/password.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BookingDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BusClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ChangeScene_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompanyDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Distance_Cal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jdbc_Manage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding>
+            <marker date="1526217310636" expanded="true" signature="1756:1852" ph="insert into managebus" />
+            <marker date="1526217310636" expanded="true" signature="2295:2344" ph="insert into company... " />
+            <marker date="1526217310636" expanded="true" signature="2830:2882" ph="delete from missingValue... " />
+            <marker date="1526217310636" expanded="true" signature="3304:3403" ph="SELECT missi... missingValue" />
+            <marker date="1526217310636" expanded="true" signature="3852:3876" ph="SELECT NAME company" />
+            <marker date="1526217310636" expanded="true" signature="3946:3970" ph="SELECT NAME company" />
+            <marker date="1526217310636" expanded="true" signature="4615:4652" ph="SELECT provi... province_th" />
+            <marker date="1526217310636" expanded="true" signature="5132:5155" ph="SELECT * FRO... managebus" />
+            <marker date="1526217310636" expanded="true" signature="6087:6108" ph="SELECT * FRO... company" />
+            <marker date="1526217310636" expanded="true" signature="6704:6727" ph="SELECT * FRO... managebus" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1925#1926#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2416#2417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManageBus_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManageCompany_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Management_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManagerDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Payment_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-335">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PropertyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3627">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SceneChanger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestJDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

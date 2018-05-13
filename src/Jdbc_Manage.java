@@ -1,6 +1,5 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;

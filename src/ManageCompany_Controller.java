@@ -1,17 +1,10 @@
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ManageCompany_Controller implements Initializable {
@@ -29,7 +22,7 @@ public class ManageCompany_Controller implements Initializable {
     TableColumn<CompanyDetail, String> namelist;
 
     private Jdbc_Manage connect = new Jdbc_Manage();
-
+    private Alert alert = new Alert(Alert.AlertType.ERROR);
 
     public void back(ActionEvent mouseEvent) {
         SceneChanger sceneChanger = new SceneChanger();
@@ -45,8 +38,19 @@ public class ManageCompany_Controller implements Initializable {
 
     @FXML
     public void addData() {
-        connect.insertRecordCompany(name.getText());
+        if(name.getText().equals("")){
+            errMsgSet("Error Dialog", "Please input company name", "");
+        }else {
+            connect.insertRecordCompany(name.getText());
         loadDataToTable();
+    }
+    }
+
+    public void errMsgSet(String title, String header, String content) {
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 
     @FXML

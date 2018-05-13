@@ -4,8 +4,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +17,7 @@ public class Login_Controller implements Initializable {
     @FXML
     Button menu;
 
-    private String PASSWORD_FILE = "src/Password.txt";
+
     private List<String> passwordList = new ArrayList<>();
     private Alert alert = new Alert(Alert.AlertType.ERROR);
     private final SceneChanger sceneChanger = new SceneChanger();
@@ -48,18 +46,12 @@ public class Login_Controller implements Initializable {
         alert.showAndWait();
     }
 
-    public List<String> readFile() {
-        try {
-            FileReader file = new FileReader(PASSWORD_FILE);
-            BufferedReader reader = new BufferedReader(file);
-            String readLine = reader.readLine();
-            while (readLine != null) {
-                passwordList.add(readLine);
-                readLine = reader.readLine();
-            }
-        } catch (Exception ex) {
-            ex.getMessage();
-        }
+    public List<String> getPassword() {
+        String password = PropertyManager.getProperty("password1","");
+        System.out.println("password : " + password);
+        String password2 = PropertyManager.getProperty("password2","");
+        passwordList.add(password);
+        passwordList.add(password2);
         return passwordList;
     }
 
@@ -78,6 +70,6 @@ public class Login_Controller implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        readFile();
+        getPassword();
     }
 }

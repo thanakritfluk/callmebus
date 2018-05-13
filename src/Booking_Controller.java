@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
