@@ -3,6 +3,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
@@ -12,6 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -42,12 +44,21 @@ public class Payment_Controller implements Initializable {
     Label seat;
     private final SceneChanger sceneChanger = new SceneChanger();
 
+    public void alertMessage(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success Payment");
+        alert.setHeaderText("Success booking!");
+        alert.setContentText("Thank you for booking with us.");
+        alert.showAndWait();
+    }
     public void cancelButtonHandler(ActionEvent mouseEvent){
         sceneChanger.changeScene(mouseEvent, "Booking_Interface.fxml");
     }
 
-    public void acceptButtonHandler(){
+    public void acceptButtonHandler(ActionEvent actionEvent){
         ticketToPDF();
+        alertMessage();
+        sceneChanger.changeScene(actionEvent,"Booking_Interface.fxml");
     }
 
     public void ticketToPDF(){
@@ -58,7 +69,8 @@ public class Payment_Controller implements Initializable {
         try{
             fileChooser = new FileChooser();
             fileChooser.setInitialFileName("TicketDetail.pdf");
-            fileChooser.setInitialDirectory(new File("src"));
+            String path = Paths.get(".").toAbsolutePath().normalize().toString();
+            fileChooser.setInitialDirectory(new File(path));
             output = fileChooser.showSaveDialog(new Stage());
 
             PdfWriter.getInstance(document, new FileOutputStream(output));
@@ -91,10 +103,11 @@ public class Payment_Controller implements Initializable {
             Paragraph departTime = new Paragraph(depart_time,FontFactory.getFont(FontFactory.HELVETICA,14,Font.BOLD));
             departTime.setAlignment(Paragraph.ALIGN_LEFT);
             document.add(departTime);
-            String return_time = String.format("%s%51s","Return Time:",bookingDetail.getArrive_time());
+            if(bookingDetail.getArrive_time().equals("")){}
+            else{String return_time = String.format("%s%51s","Return Time:",bookingDetail.getArrive_time());
             Paragraph returnTime = new Paragraph(return_time,FontFactory.getFont(FontFactory.HELVETICA,14,Font.BOLD));
             returnTime.setAlignment(Paragraph.ALIGN_LEFT);
-            document.add(returnTime);
+            document.add(returnTime);}
             String seat = String.format("%s%30s","Number of seats:",bookingDetail.getSeat());
             Paragraph seatShow = new Paragraph(seat,FontFactory.getFont(FontFactory.HELVETICA,14,Font.BOLD));
             seatShow.setAlignment(Paragraph.ALIGN_LEFT);

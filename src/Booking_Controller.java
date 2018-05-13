@@ -1,4 +1,3 @@
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -9,10 +8,6 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -38,10 +33,8 @@ public class Booking_Controller implements Initializable {
     ComboBox<BusClass> busclass;
 
     private Jdbc_Manage connect = new Jdbc_Manage();
-    private ObservableList<Object> dataCombobox;
     private ToggleGroup group = new ToggleGroup();
     private List<ManagerDetail> managerDetailsList;
-
 
     /**
      * Called to initialize a controller after its root element has been
@@ -53,7 +46,7 @@ public class Booking_Controller implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        managerDetailsList = loadAllData();
+        managerDetailsList = connect.loadAllData();
         oneway.setToggleGroup(group);
         roundtrip.setToggleGroup(group);
         loadDataDepart();
@@ -174,42 +167,8 @@ public class Booking_Controller implements Initializable {
         if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
     }
 
-    public List<ManagerDetail> loadAllData() {
-        ArrayList<ManagerDetail> list = new ArrayList<>();
-        Connection connection = connect.Connect();
-        try {
-            ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM managebus");
-            while (rs.next()) {
-                ManagerDetail managerDetail = new ManagerDetail(rs.getInt("id"),
-                        rs.getString("depart"),
-                        rs.getString("arrive"),
-                        rs.getString("departinfo"),
-                        rs.getString("arriveinfo"),
-                        rs.getString("company"),
-                        rs.getDouble("cost"));
-                list.add(managerDetail);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
-
     public void loadDataDepart() {
-
-        try {
-            Connection connection = connect.Connect();
-            dataCombobox = FXCollections.observableArrayList();
-            // Execute query and store result in a resultset
-            ResultSet rs = connection.createStatement().executeQuery("SELECT province_name FROM province_th");
-            while (rs.next()) {
-                //get string from db,whichever way
-                dataCombobox.add(rs.getString("province_name"));
-            }
-
-        } catch (SQLException ex) {
-            System.err.println("Error" + ex);
-        }
+        ObservableList<Object> dataCombobox = connect.loadDepartData();
         depart.setItems(null);
         depart.setItems(dataCombobox);
         arrive.setItems(null);
@@ -260,16 +219,28 @@ public class Booking_Controller implements Initializable {
 
     public void setBookingDetail() {
         double ticketCost = calculateTicketCost(depart.getSelectionModel().getSelectedItem().toString(), arrive.getSelectionModel().getSelectedItem().toString());
-        String[] dateTime = datetime.getSelectionModel().getSelectedItem().toString().split("A");
         double seats = Double.parseDouble(seat.getSelectionModel().getSelectedItem().toString());
-        bookingDetail = new BookingDetail(depart.getSelectionModel().getSelectedItem().toString(), arrive.getSelectionModel().getSelectedItem().toString(),
-                dateTime[0].replaceAll("Depart: ", "").toString(),
-                dateTime[1].replaceAll("rrive: ", "").toString(),
-                company.getSelectionModel().getSelectedItem().toString(), busclass.getSelectionModel().getSelectedItem().toString(),
-                String.valueOf(ticketCost * seats), String.valueOf(busclass.getSelectionModel().getSelectedItem().getValue() * seats),
-                totalCost(ticketCost, busclass.getSelectionModel().getSelectedItem().getValue(), seats),
-                seat.getSelectionModel().getSelectedItem().toString());
+
+        String companyBook = company.getSelectionModel().getSelectedItem().toString();
+        String departBook = depart.getSelectionModel().getSelectedItem().toString();
+        String returnBook = arrive.getSelectionModel().getSelectedItem().toString();
+        String busclassBook = busclass.getSelectionModel().getSelectedItem().toString();
+        String ticketcostBook = String.valueOf(ticketCost * seats);
+        String addcostBook = String.valueOf(busclass.getSelectionModel().getSelectedItem().getValue() * seats);
+        String totalcostBook = totalCost(ticketCost, busclass.getSelectionModel().getSelectedItem().getValue(), seats);
+        String seatBook = seat.getSelectionModel().getSelectedItem().toString();
+        if(roundtrip.isSelected()) {
+            String[] dateTime = datetime.getSelectionModel().getSelectedItem().toString().split("A");
+            String departDate = dateTime[0].replaceAll("Depart: ", "").toString();
+            String returnDate = dateTime[1].replaceAll("rrive: ", "").toString();
+            bookingDetail = new BookingDetail(departBook,returnBook,departDate,returnDate,companyBook,busclassBook,ticketcostBook,addcostBook,totalcostBook,seatBook);
+
+        } else {
+            String dateTime = datetime.getSelectionModel().getSelectedItem().toString();
+            bookingDetail = new BookingDetail(departBook, returnBook, dateTime.replaceAll("Depart: ", "").toString(), "", companyBook, busclassBook, ticketcostBook, addcostBook, totalcostBook, seatBook);
+        }
     }
+
 
     public static BookingDetail getBookingDetail() {
         return bookingDetail;

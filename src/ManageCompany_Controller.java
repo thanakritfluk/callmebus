@@ -51,22 +51,8 @@ public class ManageCompany_Controller implements Initializable {
 
     @FXML
     public void loadDataToTable() {
-        ObservableList<CompanyDetail> data = null;
-        try {
-            Connection connection = connect.Connect();
-            data = FXCollections.observableArrayList();
-            ResultSet rs = connection.createStatement().executeQuery("SELECT NAME FROM company");
-
-            while (rs.next()) {
-                CompanyDetail companyDetail = new CompanyDetail(rs.getString("name"));
-                data.add(companyDetail);
-                System.out.println("name : " + rs.getString("name"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        ObservableList<CompanyDetail> data = connect.loadManageCompany();
         namelist.setCellValueFactory(new PropertyValueFactory<>("name"));
-
         complist.setItems(null);
         complist.setItems(data);
     }

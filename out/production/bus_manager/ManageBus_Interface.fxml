@@ -153,14 +153,20 @@
                   </Pane>
                   <Pane layoutX="26.0" layoutY="151.0" prefHeight="66.0" prefWidth="638.0" style="-fx-background-color: white;" stylesheets="@ManageBus_Interface.css">
                      <children>
-                        <Label layoutX="292.0" layoutY="21.0" prefHeight="25.0" prefWidth="97.0" text="Company" textFill="#000000c3">
+                        <Label layoutX="300.0" layoutY="21.0" prefHeight="25.0" prefWidth="88.0" text="Company" textFill="#000000c3">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
                         </Label>
-                        <ComboBox fx:id="company" layoutX="409.0" layoutY="20.0" prefHeight="28.0" prefWidth="197.0" />
-                        <RadioButton fx:id="oneway" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" text="One Way" />
-                        <RadioButton fx:id="roundtrip" layoutX="154.0" layoutY="19.0" mnemonicParsing="false" text="Round Trip" />
+                        <ComboBox fx:id="company" layoutX="397.0" layoutY="20.0" prefHeight="28.0" prefWidth="197.0" />
+                        <RadioButton fx:id="oneway" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" onAction="#onewayButtonHandler" text="One Way">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="roundtrip" layoutX="154.0" layoutY="19.0" mnemonicParsing="false" onAction="#roundtripButtonHandler" text="Round Trip">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font></RadioButton>
                      </children>
                      <effect>
                         <DropShadow color="#e1dbdb" />

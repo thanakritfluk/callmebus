@@ -29,7 +29,7 @@
 }
 
 #exit{
-    -fx-graphic: url("image/Export_52px.png");
+    -fx-graphic: url("Image/exit.png");
     -fx-background-color: transparent;
 }
 #exit:hover{

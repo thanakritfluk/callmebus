@@ -102,18 +102,7 @@ public class ManageBus_Controller implements Initializable {
 
     @FXML
     public void loadDataForDepart() {
-        try {
-            Connection connection = connect.Connect();
-            dataCombobox = FXCollections.observableArrayList();
-            // Execute query and store result in a resultset
-            ResultSet rs = connection.createStatement().executeQuery("SELECT province_name FROM province_th");
-            while (rs.next()) {
-                //get string from db,whichever way
-                dataCombobox.add(rs.getString("province_name"));
-            }
-        } catch (SQLException ex) {
-            System.err.println("Error" + ex);
-        }
+        dataCombobox = connect.loadDepartData();
         departfrom.setItems(null);
         departfrom.setItems(dataCombobox);
         returnto.setItems(null);
@@ -169,7 +158,7 @@ public class ManageBus_Controller implements Initializable {
                     connect.insertRecordManage(depart, to, departinfo, null, companyinfo, price);
                     clearField();
                     loadDataFromManagebus();
-                } else errMsgSet("Error Dialog", "Invalid time", "");
+                } else errMsgSet("Error Dialog","Invalid time","");
             } else errMsgSet("Error Dialog", "Please select date", "");
         }
     }
@@ -216,6 +205,15 @@ public class ManageBus_Controller implements Initializable {
         return false;
     }
 
+    public void onewayButtonHandler(){
+        returntime.setDisable(true);
+        returndate.setDisable(true);
+    }
+
+    public void roundtripButtonHandler(){
+        returntime.setDisable(false);
+        returndate.setDisable(false);
+    }
     public double price_Calculate(double distance) {
         double price = 0;
         if (distance >= 1000) return price = 1000;
@@ -244,43 +242,13 @@ public class ManageBus_Controller implements Initializable {
 
     @FXML
     public void loadDataToCompany() {
-        try {
-            Connection connection = connect.Connect();
-            dataCombobox = FXCollections.observableArrayList();
-            // Execute query and store result in a resultset
-            ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM company");
-            while (rs.next()) {
-                //get string from db,whichever way
-                dataCombobox.add(rs.getString("name"));
-            }
-
-        } catch (SQLException ex) {
-            System.err.println("Error" + ex);
-        }
         company.setItems(null);
-        company.setItems(dataCombobox);
+        company.setItems(connect.loadCompanyName());
     }
 
     @FXML
     public void loadDataFromManagebus() {
-        try {
-            Connection connection = connect.Connect();
-            data = FXCollections.observableArrayList();
-            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM managebus");
-            while (resultSet.next()) {
-                ManagerDetail managerDetail = new ManagerDetail(resultSet.getInt("id"),
-                        resultSet.getString("depart"),
-                        resultSet.getString("arrive"),
-                        resultSet.getString("departinfo"),
-                        resultSet.getString("arriveinfo"),
-                        resultSet.getString("company"),
-                        resultSet.getDouble("cost"));
-                //get string from db,whichever way
-                data.add(managerDetail);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        data = connect.loadAllDataManageBus();
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
         from.setCellValueFactory(new PropertyValueFactory<>("depart"));
         to.setCellValueFactory(new PropertyValueFactory<>("arrive"));

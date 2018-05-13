@@ -17,10 +17,10 @@
 }
 
 #menu{
-    -fx-graphic: url("image/icons8-home.png");
+    -fx-graphic: url("Image/home.png");
     -fx-background-color: transparent;
 }
 
 #menu:hover{
-    -fx-graphic: url("image/big-cons8-home.png");
+    -fx-graphic: url("Image/bighome.png");
 }

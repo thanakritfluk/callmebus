@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Main_Interface.fxml"));
-        primaryStage.setTitle("Bus Manager");
+        primaryStage.setTitle("CallMeBus");
         primaryStage.setScene(new Scene(root));
         primaryStage.resizableProperty().setValue(false);
         primaryStage.show();
@@ -22,6 +22,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
+        Jdbc_Manage.Connect();
         launch(args);
     }
 }
