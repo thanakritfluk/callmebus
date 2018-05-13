@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controller of login page.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class Login_Controller implements Initializable {
     @FXML
     PasswordField managerPassword;
@@ -23,6 +27,9 @@ public class Login_Controller implements Initializable {
     private final SceneChanger sceneChanger = new SceneChanger();
 
 
+    /**
+     * Use to handle the login password.
+     */
     public void loginButtonHandler(ActionEvent actionEvent) {
         boolean check = true;
         String password = managerPassword.getText();
@@ -39,6 +46,12 @@ public class Login_Controller implements Initializable {
         if (check) errMsgSet("Error Dialog", "Incorrect password", "");
     }
 
+    /**
+     * Use to warning the user input wrong.
+     * @param title
+     * @param header
+     * @param content
+     */
     public void errMsgSet(String title, String header, String content) {
         alert.setTitle(title);
         alert.setHeaderText(header);
@@ -46,6 +59,10 @@ public class Login_Controller implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * Use to get the password add to list.
+     * @return list of password
+     */
     public List<String> getPassword() {
         String password = PropertyManager.getProperty("password1","");
         System.out.println("password : " + password);
@@ -55,6 +72,9 @@ public class Login_Controller implements Initializable {
         return passwordList;
     }
 
+    /**
+     * Handle to change to main page.
+     */
     public void menu(ActionEvent mouseEvent) {
         sceneChanger.changeScene(mouseEvent, "Main_Interface.fxml");
     }

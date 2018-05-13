@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class of manage the data base have method the connect,insert,remove and get data.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class Jdbc_Manage {
     static final String username = "fluke";
     static final String password = "1234";
@@ -12,6 +16,9 @@ public class Jdbc_Manage {
     static final String DB_URL = "jdbc:mysql://35.194.158.90:3306/CallMeBus?useSSL=false";
     static Connection connection;
 
+    /**
+     * Use to connect to the database.
+     */
     public static void Connect(){
         try {
             Class.forName(JDBC_DRIVER);
@@ -23,6 +30,11 @@ public class Jdbc_Manage {
         }
     }
 
+    /**
+     * Use the set any value to be string by check case.
+     * @param values
+     * @return string value
+     */
     public String createStateMent(Object... values) {
         StringBuilder sql = new StringBuilder();
         for (Object value : values) {
@@ -42,6 +54,10 @@ public class Jdbc_Manage {
         return sql.toString();
     }
 
+    /**
+     * Use to add data to data base by receive the values.
+     * @param values
+     */
     public void insertRecordManage(Object... values) {
         Statement statement;
         try {
@@ -58,6 +74,10 @@ public class Jdbc_Manage {
         }
     }
 
+    /**
+     * Use to add company name to data base.
+     * @param company
+     */
     public void insertRecordCompany(String company){
         Statement statement;
         try {
@@ -74,7 +94,12 @@ public class Jdbc_Manage {
         }
     }
 
-
+    /**
+     * Use to remove the database by set the table name,column and values that want to remove.
+     * @param tablename
+     * @param colum
+     * @param values
+     */
     public void removeRecord(String tablename, String colum, Object values) {
         Statement statement;
         try {
@@ -87,6 +112,14 @@ public class Jdbc_Manage {
         }
     }
 
+    /**
+     * Use to get the value of column that need to get from the table name.
+     * @param selectComlumn
+     * @param tablename
+     * @param whereColumn
+     * @param equals
+     * @return the value of that column
+     */
     public String getTextFromSelectColumn(String selectComlumn, String tablename, String whereColumn, String equals) {
         ResultSet rs = null;
         String result = null;
@@ -100,6 +133,10 @@ public class Jdbc_Manage {
         return result.replace(" ","");
     }
 
+    /**
+     * Use to load the name of company into observable list.
+     * @return Observablelist of company detail
+     */
     public ObservableList<CompanyDetail> loadManageCompany(){
         ObservableList<CompanyDetail> data = null;
         try {
@@ -117,6 +154,10 @@ public class Jdbc_Manage {
         return data;
     }
 
+    /**
+     * Use to load the province name in to observable list.
+     * @return Observable list object
+     */
     public ObservableList<Object> loadDepartData(){
         ObservableList<Object> dataCombobox = null;
         try {
@@ -134,6 +175,10 @@ public class Jdbc_Manage {
         return dataCombobox;
     }
 
+    /**
+     * Use to load all data from manage bus table to be list of manager detail.
+     * @return List of manager detail
+     */
     public List<ManagerDetail> loadAllData(){
         ArrayList<ManagerDetail> list = new ArrayList<>();
         try {
@@ -155,6 +200,10 @@ public class Jdbc_Manage {
         return list;
     }
 
+    /**
+     * Use to load company name to be observable list.
+     * @return observable list of object.
+     */
     public ObservableList<Object> loadCompanyName(){
         ObservableList<Object> dataCombobox = null;
         try {
@@ -173,6 +222,10 @@ public class Jdbc_Manage {
         return dataCombobox;
     }
 
+    /**
+     * Use to load all data from manage bus to be observable list.
+     * @return observable list of manager detail
+     */
     public ObservableList<ManagerDetail> loadAllDataManageBus(){
        ObservableList<ManagerDetail> data = null;
         try {

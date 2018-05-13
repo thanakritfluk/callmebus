@@ -1,3 +1,7 @@
+/**
+ * Object of company detail contain the name of company.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class CompanyDetail {
     String name;
 

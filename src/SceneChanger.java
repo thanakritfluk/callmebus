@@ -9,7 +9,12 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+/**
+ * Scene changer use to change between this scene to another scene.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class SceneChanger {
+
     @FXML
     public void changeScene(Event event, String fxml) {
         try {

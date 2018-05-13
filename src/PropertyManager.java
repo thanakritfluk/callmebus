@@ -6,6 +6,10 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Property manager use to handle about password to login to manage page.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ * */
 public class PropertyManager {
     public static final String DATA_FILE = "data/password.properties";
 

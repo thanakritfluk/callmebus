@@ -7,6 +7,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controller of the manage company page.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class ManageCompany_Controller implements Initializable {
     @FXML
     TextField name;
@@ -24,11 +28,17 @@ public class ManageCompany_Controller implements Initializable {
     private Jdbc_Manage connect = new Jdbc_Manage();
     private Alert alert = new Alert(Alert.AlertType.ERROR);
 
+    /**
+     * Back use to handle to change to management page.
+     */
     public void back(ActionEvent mouseEvent) {
         SceneChanger sceneChanger = new SceneChanger();
         sceneChanger.changeScene(mouseEvent, "Management_Interface.fxml");
     }
 
+    /**
+     * Remove data is the method use to handle to remove the data from database.
+     */
     @FXML
     public void removeData() {
         connect.removeRecord("company", "name", complist.getSelectionModel().getSelectedItem().getName());
@@ -36,6 +46,9 @@ public class ManageCompany_Controller implements Initializable {
         complist.getSortOrder().add(namelist);
     }
 
+    /**
+     * Add data is the method use to add the data to data base.
+     */
     @FXML
     public void addData() {
         if(name.getText().equals("")){
@@ -46,6 +59,12 @@ public class ManageCompany_Controller implements Initializable {
     }
     }
 
+    /**
+     * This use to warning the user input wrong form.
+     * @param title
+     * @param header
+     * @param content
+     */
     public void errMsgSet(String title, String header, String content) {
         alert.setTitle(title);
         alert.setHeaderText(header);
@@ -53,6 +72,9 @@ public class ManageCompany_Controller implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * This use to load all the company name to table.
+     */
     @FXML
     public void loadDataToTable() {
         ObservableList<CompanyDetail> data = connect.loadManageCompany();

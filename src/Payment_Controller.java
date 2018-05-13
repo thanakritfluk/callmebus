@@ -17,6 +17,10 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
+/**
+ * This class use to control the payment interface.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class Payment_Controller implements Initializable {
     @FXML
     Button cancel;
@@ -44,6 +48,9 @@ public class Payment_Controller implements Initializable {
     Label seat;
     private final SceneChanger sceneChanger = new SceneChanger();
 
+    /**
+     * This method use to tell user that payment is fihished.
+     */
     public void alertMessage(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success Payment");
@@ -51,16 +58,26 @@ public class Payment_Controller implements Initializable {
         alert.setContentText("Thank you for booking with us.");
         alert.showAndWait();
     }
+
+    /**
+     * This method use to help the cancel button to cancle the booking.
+     */
     public void cancelButtonHandler(ActionEvent mouseEvent){
         sceneChanger.changeScene(mouseEvent, "Booking_Interface.fxml");
     }
 
+    /**
+     * This use to accept booking and can save the booking to pdf file.
+     */
     public void acceptButtonHandler(ActionEvent actionEvent){
         ticketToPDF();
         alertMessage();
         sceneChanger.changeScene(actionEvent,"Booking_Interface.fxml");
     }
 
+    /**
+     * This use to handle save pdf file.
+     */
     public void ticketToPDF(){
         BookingDetail bookingDetail = Booking_Controller.getBookingDetail();
         Document document = new Document(PageSize.A5);
@@ -132,6 +149,7 @@ public class Payment_Controller implements Initializable {
             e.printStackTrace();
         }
     }
+
     /**
      * Called to initialize a controller after its root element has been
      * completely processed.

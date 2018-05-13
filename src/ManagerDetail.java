@@ -1,3 +1,7 @@
+/**
+ * ManagerDetail is the objects the use to collect the information about management.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class ManagerDetail {
     private int id;
     private String depart;
@@ -7,6 +11,16 @@ public class ManagerDetail {
     private String company;
     private double cost;
 
+    /**
+     * Constructor of managerdetail.
+     * @param id
+     * @param depart
+     * @param arrive
+     * @param departinfo
+     * @param arriveinfo
+     * @param company
+     * @param cost
+     */
     public ManagerDetail(int id, String depart, String arrive, String departinfo, String arriveinfo, String company, double cost) {
         this.id = (id);
         this.depart = (depart);

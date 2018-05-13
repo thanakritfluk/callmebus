@@ -1,3 +1,7 @@
+/**
+ * Object that contain the detail of booking.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class BookingDetail {
     private String from;
     private String to;

@@ -10,6 +10,11 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controller of booking page have method to set items in combobox realtime such as
+ * when select one way in combobox will have just depart time.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class Booking_Controller implements Initializable {
     private static BookingDetail bookingDetail;
     @FXML
@@ -84,6 +89,9 @@ public class Booking_Controller implements Initializable {
         setSeat();
     }
 
+    /**
+     * Set the one way data time by company in combobox with set on date time is on action .
+     */
     public void setOneWayCompany() {
         datetime.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -100,7 +108,9 @@ public class Booking_Controller implements Initializable {
         });
     }
 
-
+    /**
+     * Set the round trip data time by company in combobox with set on date time is on action .
+     */
     public void setRoundTripCompany() {
         datetime.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -116,6 +126,10 @@ public class Booking_Controller implements Initializable {
         });
     }
 
+    /**
+     * Use to set the date time combobox by method one way to check the available
+     * @return Event handler
+     */
     public EventHandler getOneWayDateEventHandler() {
         EventHandler eventHandler = new EventHandler() {
             @Override
@@ -126,7 +140,10 @@ public class Booking_Controller implements Initializable {
         return eventHandler;
     }
 
-    void oneWay() {
+    /**
+     * Method to check the available date time.
+     */
+    public void oneWay() {
         datetime.getItems().clear();
         for (ManagerDetail managerDetail : managerDetailsList) {
             if (depart.getSelectionModel().getSelectedItem() == null) return;
@@ -141,6 +158,10 @@ public class Booking_Controller implements Initializable {
         if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
     }
 
+    /**
+     * Use to set the date time combobox by method round trip to check the available
+     * @return Event handler
+     */
     public EventHandler getRoundTripDateEventHandler() {
         EventHandler eventHandler = new EventHandler() {
             @Override
@@ -151,7 +172,10 @@ public class Booking_Controller implements Initializable {
         return eventHandler;
     }
 
-    void roundTrip() {
+    /**
+     * Method to check the available date time.
+     */
+    public void roundTrip() {
         datetime.getItems().clear();
         for (ManagerDetail managerDetail : managerDetailsList) {
             if (arrive.getSelectionModel().getSelectedItem() == null) return;
@@ -166,6 +190,9 @@ public class Booking_Controller implements Initializable {
         if (datetime.getItems().isEmpty()) datetime.setPromptText("No time for routing");
     }
 
+    /**
+     * Use to load all province in to combobox.
+     */
     public void loadDataDepart() {
         ObservableList<Object> dataCombobox = connect.loadDepartData();
         depart.setItems(null);
@@ -174,6 +201,9 @@ public class Booking_Controller implements Initializable {
         arrive.setItems(dataCombobox);
     }
 
+    /**
+     * Use to handle change to main page.
+     */
     @FXML
     public void backToMenu(MouseEvent mouseEvent) {
         SceneChanger sceneChanger = new SceneChanger();
@@ -182,16 +212,28 @@ public class Booking_Controller implements Initializable {
     }
 
 
+    /**
+     * Set the amount of seat.
+     */
     public void setSeat() {
         seat.getItems().addAll(1, 2, 3, 4, 5);
         seat.getSelectionModel();
     }
 
+    /**
+     * Use to set the combobox of bus class by input the enum.
+     */
     public void setBusClass() {
         busclass.getItems().addAll(BusClass.values());
         busclass.getSelectionModel();
     }
 
+    /**
+     * Use to calculated price by latitude and longitude.
+     * @param from
+     * @param to
+     * @return price of calculated
+     */
     public double calculateTicketCost(String from, String to) {
         double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", from));
         double depart_lon = Double.valueOf(connect.getTextFromSelectColumn("province_lon", "province_th", "province_name", from));
@@ -202,6 +244,11 @@ public class Booking_Controller implements Initializable {
         return price;
     }
 
+    /**
+     * Use to calculated by distance.
+     * @param distance
+     * @return price of calculated
+     */
     public double price_Calculate(double distance) {
         double price = 0;
         if (distance >= 1000) return price = 1000;
@@ -212,10 +259,20 @@ public class Booking_Controller implements Initializable {
         else return price = 100;
     }
 
+    /**
+     * Return the price of finish calculated.
+     * @param ticketCost
+     * @param addCost
+     * @param seat
+     * @return price
+     */
     public String totalCost(double ticketCost, double addCost, double seat) {
         return String.valueOf((ticketCost + addCost) * seat);
     }
 
+    /**
+     * Use to set the booking detail before sent to payment page.
+     */
     public void setBookingDetail() {
         double ticketCost = calculateTicketCost(depart.getSelectionModel().getSelectedItem().toString(), arrive.getSelectionModel().getSelectedItem().toString());
         double seats = Double.parseDouble(seat.getSelectionModel().getSelectedItem().toString());
@@ -241,10 +298,16 @@ public class Booking_Controller implements Initializable {
     }
 
 
+    /**
+     * Return the booking detail to use in another class
+     */
     public static BookingDetail getBookingDetail() {
         return bookingDetail;
     }
 
+    /**
+     * Use to change scene to payment page.
+     */
     public void handleBooking(ActionEvent mouseEvent) {
         setBookingDetail();
         SceneChanger sceneChanger = new SceneChanger();

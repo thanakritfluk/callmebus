@@ -8,6 +8,10 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
+/**
+ * Controller of manage page to handle the action of add and remove data to data base.
+ * @author Thanakrit Daorueang,Piyaphol Wiengperm
+ */
 public class ManageBus_Controller implements Initializable {
     @FXML
     Button main, add;
@@ -79,6 +83,10 @@ public class ManageBus_Controller implements Initializable {
         makeRightFormTextField(returntime);
     }
 
+    /**
+     * Use to handle the text field can only input in the right form.
+     * @param textField
+     */
     @FXML
     public void makeRightFormTextField(TextField textField) {
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -95,6 +103,9 @@ public class ManageBus_Controller implements Initializable {
         });
     }
 
+    /**
+     * Use to load the province name to combobox.
+     */
     @FXML
     public void loadDataForDepart() {
         dataCombobox = connect.loadDepartData();
@@ -104,6 +115,12 @@ public class ManageBus_Controller implements Initializable {
         returnto.setItems(dataCombobox);
     }
 
+    /**
+     * Use to warning the user input in wrong form.
+     * @param title
+     * @param header
+     * @param content
+     */
     public void errMsgSet(String title, String header, String content) {
         alert.setTitle(title);
         alert.setHeaderText(header);
@@ -111,6 +128,12 @@ public class ManageBus_Controller implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * Calculated the price by use latitude and longitude.
+     * @param depart
+     * @param to
+     * @return price that have calculated
+     */
     public double calPriceFromDistance(String depart, String to) {
         Distance_Cal cal_Distance = new Distance_Cal();
         double depart_lat = Double.valueOf(connect.getTextFromSelectColumn("province_lat", "province_th", "province_name", depart));
@@ -121,6 +144,13 @@ public class ManageBus_Controller implements Initializable {
         return price;
     }
 
+    /**
+     * This use to handle to add the data to database case of round trip.
+     * @param depart
+     * @param to
+     * @param companyinfo
+     * @param price
+     */
     public void setAddRoundtripCase(String depart, String to, String companyinfo, double price) {
         if (roundtrip.isSelected()) {
             if (departdate.getValue() != null && returndate.getValue() != null) {
@@ -142,6 +172,13 @@ public class ManageBus_Controller implements Initializable {
         }
     }
 
+    /**
+     * Use to handle to add data to database in case one way.
+     * @param depart
+     * @param to
+     * @param companyinfo
+     * @param price
+     */
     public void setAddOneWayCase(String depart, String to, String companyinfo, double price) {
         if (oneway.isSelected()) {
             if (departdate.getValue() != null) {
@@ -158,6 +195,9 @@ public class ManageBus_Controller implements Initializable {
         }
     }
 
+    /**
+     * Use to handle the data to database and show error massage.
+     */
     @FXML
     public void addData() {
         if (oneway.isSelected() || roundtrip.isSelected()) {
@@ -175,6 +215,12 @@ public class ManageBus_Controller implements Initializable {
         manage.getSortOrder().add(departinfo);
     }
 
+    /**
+     * Use to check date that user input.
+     * @param departdate
+     * @param returndate
+     * @return true if date is right and false if wrong.
+     */
     public boolean checkDate(DatePicker departdate, DatePicker returndate) {
         if (departdate.getValue().compareTo(returndate.getValue()) > 0) return false;
         else return true;
@@ -200,15 +246,27 @@ public class ManageBus_Controller implements Initializable {
         return false;
     }
 
+    /**
+     * Set the radio button handle.
+     */
     public void onewayButtonHandler(){
         returntime.setDisable(true);
         returndate.setDisable(true);
     }
 
+    /**
+     * Set the radio button handle.
+     */
     public void roundtripButtonHandler(){
         returntime.setDisable(false);
         returndate.setDisable(false);
     }
+
+    /**
+     * Use to calculate the price by distance.
+     * @param distance
+     * @return
+     */
     public double price_Calculate(double distance) {
         double price = 0;
         if (distance >= 1000) return price = 1000;
@@ -219,7 +277,9 @@ public class ManageBus_Controller implements Initializable {
         else return price = 100;
     }
 
-
+    /**
+     * Use to clear all field.
+     */
     public void clearField() {
         departtime.clear();
         returntime.clear();
@@ -228,6 +288,9 @@ public class ManageBus_Controller implements Initializable {
 
     }
 
+    /**
+     * Use to remove the data base.
+     */
     @FXML
     public void removeData() {
         connect.removeRecord("managebus", "id", manage.getSelectionModel().getSelectedItem().getId());
@@ -235,12 +298,18 @@ public class ManageBus_Controller implements Initializable {
         manage.getSortOrder().add(departinfo);
     }
 
+    /**
+     * Use to load the data to company combobox.
+     */
     @FXML
     public void loadDataToCompany() {
         company.setItems(null);
         company.setItems(connect.loadCompanyName());
     }
 
+    /**
+     * Use to load all data to table.
+     */
     @FXML
     public void loadDataFromManagebus() {
         data = connect.loadAllDataManageBus();
@@ -255,7 +324,9 @@ public class ManageBus_Controller implements Initializable {
         manage.setItems(data);
     }
 
-
+    /**
+     * Use to handle to change page to management.
+     */
     @FXML
     public void back(ActionEvent mouseEvent) {
         SceneChanger sceneChanger = new SceneChanger();
