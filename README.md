@@ -10,28 +10,28 @@ We design to make it easily to use and comfortably to travel.
 
 # Interface
 
-#Main menu
+# Main menu
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/main.png)
 
-#Booking window
+# Booking window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/book.png)
 
-#Payment window
+# Payment window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/payment.png)
 
-#Manager login window
+# Manager login window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/password.png)
 
-#Management window
+# Management window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/manage.png)
 
-#Timetable managing window
+# Timetable managing window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/time.png)
 
-#Company managing window
+# Company managing window
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/company.png)
 
-#UML Class Diagram
+# UML Class Diagram
 ![title](https://github.com/thanakritfluk/callmebus/blob/master/uml.png)
 
 
